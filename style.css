@@ -1,0 +1,49 @@
+:root {
+  --pink: #FF79DA;
+  --black: #17202a;
+  --green: #99E2D0;
+  --purple: #9356DC;
+  --gray: #e5e5e5;
+  --gray_dark: #f2f2f2;
+}
+
+html {
+  min-width: auto;
+}
+
+/* body */
+body {
+  color: var(--black);
+  font-family: "Roboto", sans-serif;
+}
+
+/*nav*/
+form.search_form {
+  background-color: var(--gray);
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.search_form_text {
+  background: none;
+  border: none;
+  font-weight: bold;
+  height: 22px;
+  font-size: small;
+  width: auto;
+  justify-content: center;
+}
+
+.logo_ohmyfood {
+  font-size: small;
+  padding: 0 0 26px 0;
+  margin: 10px 10px 12px 10px;
+}
+
+.research {
+  background-color: var(--gray_dark);
+  padding: 40px 0 30px 0;
+  width: auto;
+}
