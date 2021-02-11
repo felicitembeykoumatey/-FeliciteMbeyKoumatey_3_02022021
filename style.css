@@ -16,8 +16,11 @@ body {
   color: var(--black);
   font-family: "Roboto", sans-serif;
 }
+/* main */
 
-/*nav*/
+/* header */
+
+/* nav */
 form.search_form {
   background-color: var(--gray);
   height: 50px;
