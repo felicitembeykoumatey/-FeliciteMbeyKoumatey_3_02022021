@@ -43,10 +43,14 @@ form.search_form {
   font-size: small;
   padding: 0 0 26px 0;
   margin: 10px 10px 12px 10px;
+  font-family: "Shrikhand";
 }
 
 .research {
   background-color: var(--gray_dark);
   padding: 40px 0 30px 0;
   width: auto;
+}
+.title{
+  font-family: "Shrikhand";
 }
