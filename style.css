@@ -45,7 +45,7 @@ form.search_form {
 
 .logo_ohmyfood {
   font-size: small;
-  padding: 0 0 26px 0;
+  padding: 9px 0 7px 70px;
   margin: 10px 10px 12px 10px;
   font-family: "Shrikhand";
 }
@@ -59,10 +59,12 @@ form.search_form {
 .title {
   font-family: "Shrikhand";
 }
-.restaurants{
+
+.restaurants {
   background-color: var(--gray);
   width: auto;
 }
+
 /*footer*/
 
 footer {
