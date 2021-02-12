@@ -64,6 +64,13 @@ form.search_form {
   background-color: var(--gray);
   width: auto;
 }
+figcaption{
+  background-color: var(--white);
+  border-radius: 10px 10px 10px 10px;
+}
+img .enchanted_note{
+  border-radius: 0 0 12px 0;
+}
 
 /*footer*/
 
