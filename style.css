@@ -72,6 +72,30 @@ img .enchanted_note{
   border-radius: 0 0 12px 0;
 }
 
+.notify-badge {
+    position: absolute;
+    background-color: var(--green);
+    right: 11px;
+    width: auto;
+    text-align: center;
+    line-height: 2rem;
+    font-size: small;
+    color: white;
+    padding: 0 12px 5px 5px;
+    margin: 10px 12px 0 0;
+}
+img .palette_of_taste{
+      height: 50px;
+    width: auto;
+    border: 0 solid transparent;
+    border-radius: 15px 15px 0 0;
+    box-shadow: none;
+    object-fit: cover;
+}
+.card{
+      background-color: var(--white);
+    border-radius: 15px;
+}
 /*footer*/
 
 footer {
@@ -88,3 +112,29 @@ footer a {
 ul {
   text-decoration: none;
 }
+
+
+/*Tablette landscape*/
+@media screen and (min-width: 375px) {
+  body{
+    width: auto
+  }
+  }
+
+@media screen and (min-width: 768px) {
+  body{
+    width: auto
+  }}
+@media screen and (min-width: 1024px) {
+  
+  body{
+    width: auto
+  }}
+@media screen and (min-width: 1440px) {
+    body{
+    width: auto
+  }}
+@media screen and (min-width: 2560px) {
+    body{
+    width: auto
+  }}
