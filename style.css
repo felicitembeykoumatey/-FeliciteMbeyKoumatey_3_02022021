@@ -22,9 +22,15 @@ body {
 /* main */
 
 /* header */
+header {
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / 20%);
+  position: relative;
+  z-index: 1000;
+}
 
 /* nav */
 form.search_form {
+  display: flex;
   background-color: var(--gray);
   height: 50px;
   justify-content: center;
@@ -33,26 +39,58 @@ form.search_form {
 
 }
 
+.navigator {
+  justify-content: center;
+  width: auto;
+}
+
 .search_form_text {
   background: none;
   border: none;
   font-weight: bold;
-  height: 22px;
   font-size: small;
   width: auto;
   justify-content: center;
 }
 
 .logo_ohmyfood {
+  display: flex;
   font-size: small;
-  padding: 9px 0 7px 70px;
-  margin: 10px 10px 12px 10px;
   font-family: "Shrikhand";
+  padding: 10px 15px 15px 67px;
+}
+
+h1 {
+  display: flex;
+  padding: 0 4px 12px 21px;
+  margin: 0;
+}
+
+p {
+  display: flex;
+  font-weight: 400;
+  margin: 15px 15px 15px 25px;
+}
+
+.explore {
+  display: flex;
+  justify-content: center;
+  margin: 25px 15px 15px 70px;
+  border: 0;
+  padding: 10px 20px 10px 15px;
+  font-weight: bold;
+  font-size: small;
+  border-radius: 100px;
+  color: var(--white);
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9));
+  cursor: pointer;
+  transition-duration: .50s;
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
 }
 
 .research {
   background-color: var(--gray_dark);
-  padding: 40px 0 30px 0;
+  padding: 10px 0 10px 0;
   width: auto;
 }
 
@@ -64,44 +102,61 @@ form.search_form {
   background-color: var(--gray);
   width: auto;
 }
-figcaption{
+
+figcaption {
   background-color: var(--white);
   border-radius: 10px 10px 10px 10px;
 }
-img .enchanted_note{
+
+img .enchanted_note {
   border-radius: 0 0 12px 0;
 }
 
 .notify-badge {
-    position: absolute;
-    background-color: var(--green);
-    right: 11px;
-    width: auto;
-    text-align: center;
-    line-height: 2rem;
-    font-size: small;
-    color: white;
-    padding: 0 12px 5px 5px;
-    margin: 10px 12px 0 0;
+  position: absolute;
+  background-color: var(--green);
+  right: 11px;
+  width: auto;
+  text-align: center;
+  line-height: 2rem;
+  font-size: small;
+  color: var(--white);
+  padding: 0 12px 5px 5px;
+  margin: 10px 12px 0 0;
 }
-img .palette_of_taste{
-      height: 50px;
-    width: auto;
-    border: 0 solid transparent;
-    border-radius: 15px 15px 0 0;
-    box-shadow: none;
-    object-fit: cover;
+
+img .palette_of_taste {
+  height: 50px;
+  width: auto;
+  border: 0 solid transparent;
+  border-radius: 15px 15px 0 0;
+  box-shadow: none;
+  object-fit: cover;
 }
-.card{
-      background-color: var(--white);
-    border-radius: 15px;
+
+.card {
+  background-color: var(--white);
+  border-radius: 15px;
 }
+
+li {
+  padding: 15px;
+  margin: 10px 0 10px 5px;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+  border-radius: 1.25rem;
+  background-color: var(--gray);
+  display: flex;
+  position: relative;
+}
+
 /*footer*/
 
 footer {
+  display: flex;
   color: var(--white);
   background-color: var(--black);
   width: auto;
+  flex-direction: column;
 }
 
 footer a {
@@ -110,31 +165,63 @@ footer a {
 }
 
 ul {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  display: flex;
   text-decoration: none;
 }
 
 
-/*Tablette landscape*/
-@media screen and (min-width: 375px) {
-  body{
-    width: auto
-  }
-  }
 
+/*mobile_s*/
+@media screen and (min-width: 320px) {
+  body {
+    width: auto
+  }
+}
+
+/*mobile_m*/
+@media screen and (min-width: 375px) {
+  body {
+    width: auto
+  }
+}
+
+/*mobile_l*/
+@media screen and (min-width: 425px) {
+  body {
+    width: auto
+  }
+}
+
+/*tablette*/
 @media screen and (min-width: 768px) {
-  body{
+  body {
     width: auto
-  }}
+  }
+}
+
+/*laptop*/
 @media screen and (min-width: 1024px) {
-  
-  body{
+
+  body {
     width: auto
-  }}
+  }
+}
+
+/*laptop_l*/
 @media screen and (min-width: 1440px) {
-    body{
+  body {
     width: auto
-  }}
+  }
+}
+
+/*4k*/
 @media screen and (min-width: 2560px) {
-    body{
+  body {
     width: auto
-  }}
+  }
+}
