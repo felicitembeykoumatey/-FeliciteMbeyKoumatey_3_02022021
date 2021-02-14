@@ -19,8 +19,8 @@
 
  <body>
    <main>
-     <header>
-       <nav class="navigator">
+     <header class="header">
+      
          <img src="./images/logo/ohmyfood@2x.svg"  alt="logo du site ohmyfood" class="logo_ohmyfood">
          <form class="search_form" role="search">
            <label>
@@ -28,38 +28,36 @@
            </label>
            <input class="search_form_text" type="text" name="research" id="research" placeholder="Paris, Belleville">
          </form>
-       </nav>
+    
      </header>
 
      <section class="research">
        <h1>Réservez le menu qui vous convient</h1>
        <p>Découvrez des restaurants d'exception, sélectionner par nos soins.</p>
-       <button class="Explore">Explorez nos restaurants</button>
+       <button class="explore">Explorez nos restaurants</button>
      </section>
 
      <section class="function">
        <h2>Fonctionnement</h2>
 
-       <ul class="function_list">
+       <ol class="function_list">
          <li class=function_global_list>
            <p class="function_list_number"> 1</p>
            <i class="fas fa-mobile-alt">Choisisez un restaurant</i>
          </li>
-       </ul>
-
-       <ul class="function_list">
+       
+     
          <li class=function_global_list>
            <p class="function_list_number"> 2</p>
            <i class="fas fa-list-ul">Composez votre menu</i>
          </li>
-       </ul>
-
-       <ul class="function_list">
+     
+     
          <li class=function_global_list>
            <p class="function_list_number">3</p>
            <i class="fas fa-store">Dégustez au restaurant</i>
          </li>
-       </ul>
+       </ol>
      </section>
 
      <section class="restaurants">
@@ -67,6 +65,7 @@
        <div class="all_cards">
 
          <a class="card" href="#">
+           <figure class="cards">
            <span class="notify-badge">Nouveau</span>
            <img src="images/restaurants/la_palette_du_goût.jpg" srcset="images/restaurants/la_palette_du_goût.jpg 550.25w,
            images/restaurants/la_palette_du_goût.jpg 1100.5w,
@@ -82,9 +81,11 @@
                <i class="fas fa-heart"></i>
              </div>
            </figcaption>
+           </figure>
          </a>
 
          <a class="card" href="#">
+              <figure class="cards">
            <span class="notify-badge">Nouveau</span>
            <img src="images/restaurants/la_note_enchantée.jpg" srcset="images/restaurants/la_note_enchantée.jpg 378w
            images/restaurants/la_note_enchantée.jpg 756w
@@ -100,9 +101,11 @@
                <i class="fas fa-heart"></i>
              </div>
            </figcaption>
+              </figure>
          </a>
 
          <a class="card" href="#">
+              <figure class="cards">
            <img src="images/restaurants/plat_a_la_française.jpg" srcset="images/restaurants/plat_a_la_française.jpg 492w
            images/restaurants/plat_a_la_française.jpg 984w,
             images/restaurants/plat_a_la_française.jpg 1968w,
@@ -117,10 +120,11 @@
                <i class="fas fa-heart"></i>
              </div>
            </figcaption>
+              </figure>
          </a>
 
          <a class="card" href="#">
-        
+              <figure class="cards">
            <img src="images/restaurants/les_délices_du_sens.jpg" srcset="images/restaurants/les_délices_du_sens.jpg 630.375w
            images/restaurants/les_délices_du_sens.jpg 1260.75w
            images/restaurants/les_délices_du_sens.jpg 2521.5w,
@@ -135,6 +139,7 @@
                <i class="fas fa-heart"></i>
              </div>
            </figcaption>
+              </figure>
          </a>
 
        </div>
