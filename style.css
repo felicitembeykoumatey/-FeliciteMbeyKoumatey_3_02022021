@@ -29,28 +29,10 @@ header {
 }
 
 /* nav */
-form.search_form {
-  display: flex;
-  background-color: var(--gray);
-  height: 50px;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-
-}
 
 .navigator {
   justify-content: center;
   width: auto;
-}
-
-.search_form_text {
-  background: none;
-  border: none;
-  font-weight: bold;
-  font-size: small;
-  width: auto;
-  justify-content: center;
 }
 
 .logo_ohmyfood {
@@ -70,6 +52,27 @@ p {
   display: flex;
   font-weight: 400;
   margin: 15px 15px 15px 25px;
+}
+
+/*research*/
+
+.search_form_text {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: small;
+  width: auto;
+  justify-content: center;
+}
+
+form.search_form {
+  display: flex;
+  background-color: var(--gray);
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+
 }
 
 .explore {
@@ -98,6 +101,19 @@ p {
   font-family: "Shrikhand";
 }
 
+/*Function*/
+
+.function_list_number {
+  color: var(--white);
+  background-color: var(--purple);
+  border: 1px solid var(--purple);
+  border-radius: 50%;
+  padding: 4px 8px 4px 8px;
+  margin: 10px 10px 22px -22px;
+}
+
+/*restaurants*/
+
 .restaurants {
   background-color: var(--gray);
   width: auto;
@@ -106,11 +122,9 @@ p {
 figcaption {
   background-color: var(--white);
   border-radius: 10px 10px 10px 10px;
+  text-decoration: none;
 }
 
-img .enchanted_note {
-  border-radius: 0 0 12px 0;
-}
 
 .notify-badge {
   position: absolute;
@@ -125,18 +139,58 @@ img .enchanted_note {
   margin: 10px 12px 0 0;
 }
 
-img .palette_of_taste {
-  height: 50px;
-  width: auto;
-  border: 0 solid transparent;
+.enchanted_note {
+  display: flex;
+  height: 70%;
   border-radius: 15px 15px 0 0;
   box-shadow: none;
   object-fit: cover;
+  padding: 10px 12px 10px 12px;
+  margin: 15px 10px 15px 15px;
+  width: auto;
+}
+
+.pallette_of_taste {
+  display: flex;
+  height: 70%;
+  border-radius: 15px 15px 0 0;
+  box-shadow: none;
+  object-fit: cover;
+  padding: 10px 12px 10px 12px;
+  margin: 15px 10px 15px 15px;
+  width: auto;
+}
+
+.card_delicacies {
+  display: flex;
+  height: 70%;
+  border-radius: 15px 15px 0 0;
+  box-shadow: none;
+  object-fit: cover;
+  padding: 10px 12px 10px 12px;
+  margin: 15px 10px 15px 15px;
+  width: auto;
+}
+
+.card_french {
+  display: flex;
+  height: 70%;
+  border-radius: 15px 15px 0 0;
+  box-shadow: none;
+  object-fit: cover;
+  padding: 10px 12px 10px 12px;
+  margin: 15px 10px 15px 15px;
+  width: auto;
 }
 
 .card {
   background-color: var(--white);
   border-radius: 15px;
+}
+
+.cards {
+  display: flex;
+  border-radius: 10px 10px 10px;
 }
 
 li {
@@ -169,9 +223,12 @@ ul {
   flex-direction: column;
 }
 
-li {
+.ustensil,
+.helping,
+.notice,
+.messenger {
   display: flex;
-  text-decoration: none;
+  padding: 10px 12px 10px 12px;
 }
 
 
