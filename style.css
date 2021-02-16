@@ -1,0 +1,323 @@
+:root {
+  --pink: #FF79DA;
+  --black: #17202a;
+  --green: #99E2D0;
+  --purple: #9356DC;
+  --gray: #e5e5e5;
+  --gray_dark: #f2f2f2;
+  --white: #FFFFFF;
+}
+
+html {
+  min-width: auto;
+}
+
+/* body */
+body {
+  color: var(--black);
+  font-family: "Roboto", sans-serif;
+  min-width: 360px;
+}
+
+/* main */
+
+/* header */
+
+main {
+  width: auto;
+}
+
+header {
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / 20%);
+  position: relative;
+  z-index: 1000;
+}
+
+/* nav */
+
+.navigator {
+  justify-content: center;
+  width: auto;
+}
+
+.logo_ohmyfood {
+  display: flex;
+  font-size: small;
+  font-family: "Shrikhand";
+  padding: 10px 15px 15px 67px;
+  width: auto;
+}
+
+h2 {
+  display: flex;
+  margin: 0;
+  padding: 10px 12px 12px 38px;
+  width: auto;
+}
+
+h1 {
+  display: flex;
+  padding: 0 4px 12px 0;
+  margin: 0;
+  width: auto;
+}
+
+section {
+  width: auto;
+}
+
+p {
+  display: flex;
+  font-weight: 400;
+  margin: 15px 15px 15px 25px;
+}
+
+/*research*/
+
+.search_form_text {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: small;
+  width: auto;
+  justify-content: center;
+}
+
+form.search_form {
+  display: flex;
+  background-color: var(--gray);
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+
+}
+
+.explore {
+  display: flex;
+  justify-content: center;
+  margin: 25px 15px 15px 70px;
+  border: 0;
+  padding: 10px 20px 10px 15px;
+  font-weight: bold;
+  font-size: small;
+  border-radius: 100px;
+  color: var(--white);
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9));
+  cursor: pointer;
+  transition-duration: .50s;
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+}
+
+.research {
+  background-color: var(--gray_dark);
+  padding: 10px 0 10px 0;
+  width: auto;
+}
+
+.title {
+  font-family: "Shrikhand";
+}
+
+/*Function*/
+
+.function_list_number {
+  color: var(--white);
+  background-color: var(--purple);
+  border: 1px solid var(--purple);
+  border-radius: 50%;
+  padding: 4px 8px 4px 8px;
+  margin: 10px 10px 22px -22px;
+}
+
+/*restaurants*/
+
+.restaurants {
+  background-color: var(--gray);
+  width: auto;
+}
+
+figcaption {
+  background-color: var(--white);
+  border-radius: 0 0 10px 10px;
+  padding: 0 10px 26px 10px;
+  margin: -28px 8px 7px 14px;
+  width: 70%;
+  height: 40px;
+}
+
+.notify-badge {
+  position: absolute;
+  background-color: var(--green);
+  right: 37px;
+  width: auto;
+  text-align: center;
+  line-height: 2rem;
+  font-size: small;
+  color: var(--white);
+  padding: 0 12px 5px 5px;
+  margin: 15px 12px 0 0;
+}
+
+.enchanted_note {
+  display: flex;
+  height: 193px;
+  border-radius: 15px 15px 0 0;
+  box-shadow: none;
+  object-fit: cover;
+  padding: 10px 12px 10px 12px;
+  margin: 15px 10px 15px 15px;
+  width: 73%;
+}
+
+.pallette_of_taste,
+.card_french,
+.card_delicacies {
+  display: flex;
+  height: 155px;
+  border-radius: 15px 15px 0 0;
+  box-shadow: none;
+  object-fit: cover;
+  padding: 10px 12px 10px 12px;
+  margin: -7px 10px 15px 9px;
+  width: 73%;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 15px;
+}
+
+.cards {
+  display: flex;
+  border-radius: 10px 10px 10px;
+}
+
+.all_cards {
+  width: auto;
+}
+
+li {
+  margin: 10px 0 10px 5px;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+  border-radius: 1.25rem;
+  background-color: var(--gray);
+  display: flex;
+  position: relative;
+}
+
+ol {
+  display: flex;
+  width: 69%;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2px 0px 0px -18px;
+
+}
+
+.fa-heart:hover {
+  position: relative;
+  right: 37px;
+ color: var(--pink);
+  
+
+}
+
+/*footer*/
+
+footer {
+  display: flex;
+  color: var(--white);
+  background-color: var(--black);
+  width: auto;
+  flex-direction: column;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.ustensil,
+.helping,
+.notice,
+.messenger {
+  display: flex;
+  padding: 10px 12px 10px 12px;
+}
+
+
+
+/*mobile_s*/
+@media screen and (min-width: 320px) {
+  body {
+    width: auto
+  }
+}
+
+/*mobile_m*/
+@media screen and (min-width: 375px) {
+  body {
+    width: auto
+  }
+  .notify-badge {
+    right: 100px;
+}
+
+/*mobile_l*/
+@media screen and (min-width: 425px) {
+  body {
+    width: auto
+  }
+  .notify-badge {
+    right: 115px;
+}
+}
+
+/*tablette*/
+@media screen and (min-width: 768px) {
+  body {
+    width: auto
+  }
+  .pallette_of_taste, .card_french, .card_delicacies {
+    width:40% ;
+}
+.notify-badge {
+    right: 433px;
+}
+.enchanted_note {
+  width: 38%;
+}
+figcaption {
+    margin: -28px 8px 7px 21px;
+    width: 37%;
+    height: 38px;
+}
+}
+
+/*laptop*/
+@media screen and (min-width: 1024px) {
+
+  body {
+    width: auto
+  }
+}
+
+/*laptop_l*/
+@media screen and (min-width: 1440px) {
+  body {
+    width: auto
+  }
+}
+
+/*4k*/
+@media screen and (min-width: 2560px) {
+  body {
+    width: auto
+  }
+}
