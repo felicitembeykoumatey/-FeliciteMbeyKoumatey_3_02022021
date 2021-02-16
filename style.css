@@ -197,23 +197,6 @@ figcaption {
   width: auto;
 }
 
-li {
-  margin: 10px 0 10px 5px;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
-  border-radius: 1.25rem;
-  background-color: var(--gray);
-  display: flex;
-  position: relative;
-}
-
-ol {
-  display: flex;
-  width: 69%;
-  justify-content: center;
-  flex-direction: column;
-  margin: 2px 0px 0px -18px;
-
-}
 
 .fa-heart:hover {
   position: relative;
