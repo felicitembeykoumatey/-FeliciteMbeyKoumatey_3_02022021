@@ -22,6 +22,11 @@ body {
 /* main */
 
 /* header */
+
+main {
+  width: auto;
+}
+
 header {
   box-shadow: 0 0 0.5rem rgb(0 0 0 / 20%);
   position: relative;
@@ -40,12 +45,25 @@ header {
   font-size: small;
   font-family: "Shrikhand";
   padding: 10px 15px 15px 67px;
+  width: auto;
+}
+
+h2 {
+  display: flex;
+  margin: 0;
+  padding: 10px 12px 12px 38px;
+  width: auto;
 }
 
 h1 {
   display: flex;
-  padding: 0 4px 12px 21px;
+  padding: 0 4px 12px 0;
   margin: 0;
+  width: auto;
+}
+
+section {
+  width: auto;
 }
 
 p {
@@ -121,66 +139,48 @@ form.search_form {
 
 figcaption {
   background-color: var(--white);
-  border-radius: 10px 10px 10px 10px;
-  text-decoration: none;
+  border-radius: 0 0 10px 10px;
+  padding: 0 10px 26px 10px;
+  margin: -28px 8px 7px 14px;
+  width: 70%;
+  height: 40px;
 }
-
 
 .notify-badge {
   position: absolute;
   background-color: var(--green);
-  right: 11px;
+  right: 37px;
   width: auto;
   text-align: center;
   line-height: 2rem;
   font-size: small;
   color: var(--white);
   padding: 0 12px 5px 5px;
-  margin: 10px 12px 0 0;
+  margin: 15px 12px 0 0;
 }
 
 .enchanted_note {
   display: flex;
-  height: 70%;
+  height: 193px;
   border-radius: 15px 15px 0 0;
   box-shadow: none;
   object-fit: cover;
   padding: 10px 12px 10px 12px;
   margin: 15px 10px 15px 15px;
-  width: auto;
+  width: 73%;
 }
 
-.pallette_of_taste {
-  display: flex;
-  height: 70%;
-  border-radius: 15px 15px 0 0;
-  box-shadow: none;
-  object-fit: cover;
-  padding: 10px 12px 10px 12px;
-  margin: 15px 10px 15px 15px;
-  width: auto;
-}
-
+.pallette_of_taste,
+.card_french,
 .card_delicacies {
   display: flex;
-  height: 70%;
+  height: 155px;
   border-radius: 15px 15px 0 0;
   box-shadow: none;
   object-fit: cover;
   padding: 10px 12px 10px 12px;
-  margin: 15px 10px 15px 15px;
-  width: auto;
-}
-
-.card_french {
-  display: flex;
-  height: 70%;
-  border-radius: 15px 15px 0 0;
-  box-shadow: none;
-  object-fit: cover;
-  padding: 10px 12px 10px 12px;
-  margin: 15px 10px 15px 15px;
-  width: auto;
+  margin: -7px 10px 15px 9px;
+  width: 73%;
 }
 
 .card {
@@ -193,14 +193,34 @@ figcaption {
   border-radius: 10px 10px 10px;
 }
 
+.all_cards {
+  width: auto;
+}
+
 li {
-  padding: 15px;
   margin: 10px 0 10px 5px;
   box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
   border-radius: 1.25rem;
   background-color: var(--gray);
   display: flex;
   position: relative;
+}
+
+ol {
+  display: flex;
+  width: 69%;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2px 0px 0px -18px;
+
+}
+
+.fa-heart : :hover {
+  position: relative;
+  right: 37px;
+ color: var(--pink);
+  
+
 }
 
 /*footer*/
@@ -245,6 +265,8 @@ ul {
   body {
     width: auto
   }
+  .notify-badge {
+    right: 100px;
 }
 
 /*mobile_l*/
@@ -252,6 +274,9 @@ ul {
   body {
     width: auto
   }
+  .notify-badge {
+    right: 115px;
+}
 }
 
 /*tablette*/
@@ -259,6 +284,20 @@ ul {
   body {
     width: auto
   }
+  .pallette_of_taste, .card_french, .card_delicacies {
+    width:40% ;
+}
+.notify-badge {
+    right: 433px;
+}
+.enchanted_note {
+  width: 38%;
+}
+figcaption {
+    margin: -28px 8px 7px 21px;
+    width: 37%;
+    height: 38px;
+}
 }
 
 /*laptop*/
