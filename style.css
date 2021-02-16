@@ -174,7 +174,7 @@ figcaption {
 .card_french,
 .card_delicacies {
   display: flex;
-  height: 155px;
+  height: 130px;
   border-radius: 15px 15px 0 0;
   box-shadow: none;
   object-fit: cover;
@@ -201,8 +201,8 @@ figcaption {
 .fa-heart:hover {
   position: relative;
   right: 37px;
- color: var(--pink);
-  
+  color: var(--pink);
+
 
 }
 
@@ -248,59 +248,67 @@ ul {
   body {
     width: auto
   }
+
   .notify-badge {
     right: 100px;
-}
-
-/*mobile_l*/
-@media screen and (min-width: 425px) {
-  body {
-    width: auto
   }
-  .notify-badge {
-    right: 115px;
-}
-}
 
-/*tablette*/
-@media screen and (min-width: 768px) {
-  body {
-    width: auto
+  /*mobile_l*/
+  @media screen and (min-width: 425px) {
+    body {
+      width: auto
+    }
+
+    .notify-badge {
+      right: 115px;
+    }
   }
-  .pallette_of_taste, .card_french, .card_delicacies {
-    width:40% ;
-}
-.notify-badge {
-    right: 433px;
-}
-.enchanted_note {
-  width: 38%;
-}
-figcaption {
-    margin: -28px 8px 7px 21px;
-    width: 37%;
-    height: 38px;
-}
-}
 
-/*laptop*/
-@media screen and (min-width: 1024px) {
+  /*tablette*/
+  @media screen and (min-width: 768px) {
+    body {
+      width: auto
+    }
 
-  body {
-    width: auto
+    .pallette_of_taste,
+    .card_french,
+    .card_delicacies {
+      width: 40%;
+    }
+
+    .notify-badge {
+      right: 433px;
+    }
+
+    .enchanted_note {
+      width: 38%;
+    }
+
+    figcaption {
+      margin: -28px 8px 7px 21px;
+      width: 37%;
+      height: 38px;
+    }
   }
-}
 
-/*laptop_l*/
-@media screen and (min-width: 1440px) {
-  body {
-    width: auto
-  }
-}
+  /*laptop*/
+  @media screen and (min-width: 1024px) {
 
-/*4k*/
-@media screen and (min-width: 2560px) {
-  body {
-    width: auto
+    body {
+      width: auto
+    }
   }
-}
+
+  /*laptop_l*/
+  @media screen and (min-width: 1440px) {
+    body {
+      width: auto
+    }
+  }
+
+  /*4k*/
+  @media screen and (min-width: 2560px) {
+    body {
+      width: auto
+    }
+  }
