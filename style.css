@@ -166,8 +166,8 @@ figcaption {
   box-shadow: none;
   object-fit: cover;
   padding: 10px 12px 10px 12px;
-  margin: 15px 10px 15px 15px;
-  width: 73%;
+  margin: 15px 10px 15px 1px;
+  width: 76%;
 }
 
 .pallette_of_taste,
