@@ -6,10 +6,11 @@
   --gray: #e5e5e5;
   --gray_dark: #f2f2f2;
   --white: #FFFFFF;
+  --thistle: #D8BFD8;
 }
 
 html {
-  min-width: auto;
+ width:auto;
 }
 
 /* body */
@@ -17,6 +18,7 @@ body {
   color: var(--black);
   font-family: "Roboto", sans-serif;
   min-width: 360px;
+  width: auto;
 }
 
 /* main */
@@ -38,6 +40,9 @@ header {
 .navigator {
   justify-content: center;
   width: auto;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--white);
 }
 
 .logo_ohmyfood {
@@ -48,18 +53,96 @@ header {
   width: auto;
 }
 
-h2 {
-  display: flex;
-  margin: 0;
-  padding: 10px 12px 12px 38px;
-  width: auto;
+/*Fonctionnement*/
+ol {
+  counter-reset (funtions);
 }
 
-h1 {
+li {
+  list-style-type: none;
+  counter-increment: functions;
+  margin-bottom: 10px;
+}
+
+li:before {
+  content: counter(functions);
+  padding: 12px 20px 14px 15px;
+  margin: 15px 10px 15px -17px;
+  vertical-align: top;
+  background: var(--purple);
+  border-radius: 30px 30px 30px 30px;
+  font-weight: bold;
+  font-size: medium;
+  color: var(--white);
+}
+
+.choice_restaurant:hover {
+  background-color: var(--thistle);
+  color: var(--black);
+}
+
+.main_eat:hover {
+  background-color: var(--thistle);
+  color: var(--black);
+}
+
+.delicious:hover {
+  background-color: var(--thistle);
+  color: var(--black);
+}
+
+.choice_restaurant,
+.main_eat,
+.delicious {
+  display: flex;
+  align-items: center;
+  background-color: var(--gray_dark);
+  border-radius: 20px;
+  margin-right: 25px;
+  margin-top: 25px;
+  width: auto;
+  height: 60px;
+  box-shadow: 0 0px 15px rgb(0 0 0 / 20%);
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+  font-weight: bold;
+
+}
+
+.fa-list-ul,
+.fa-store,
+.fa-mobile-alt {
+  margin: 10px 10px 10px 10px;
+}
+
+.fa-store:hover {
+  background-color: var(--white);
+  color: var(--purple);
+}
+
+.fa-mobile-alt:hover {
+  background-color: var(--white);
+  color: var(--purple);
+}
+
+.fa-list-ul:hover {
+  background-color: var(--white);
+  color: var(--purple);
+}
+
+.function_title,
+.restaurants_title {
+  display: flex;
+  font-size: large;
+  font-weight: bold;
+}
+
+.research_title {
   display: flex;
   padding: 0 4px 12px 0;
-  margin: 0;
+  margin: 12px 12px 10px 26px;
   width: auto;
+  font-weight: bold;
 }
 
 section {
@@ -78,10 +161,12 @@ p {
   background: none;
   border: none;
   font-weight: bold;
-  font-size: small;
+  font-size: medium;
   width: auto;
   justify-content: center;
+  color: var(--black);
 }
+
 
 form.search_form {
   display: flex;
@@ -90,23 +175,26 @@ form.search_form {
   justify-content: center;
   align-items: center;
   width: auto;
+  font-weight: bold;
 
 }
 
-.explore {
+.explorer {
   display: flex;
+  text-decoration: none;
   justify-content: center;
-  margin: 25px 15px 15px 70px;
+  margin: 24px 15px 15px 70px;
   border: 0;
-  padding: 10px 20px 10px 15px;
+  padding: 15px 15px 15px 15px;
   font-weight: bold;
-  font-size: small;
+  font-size: medium;
   border-radius: 100px;
   color: var(--white);
   background-image: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9));
   cursor: pointer;
   transition-duration: .50s;
   box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+  width: auto;
 }
 
 .research {
@@ -206,6 +294,56 @@ figcaption {
 
 }
 
+/*4 menus*/
+.menu_main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray_dark);
+  padding-bottom: 40px;
+}
+
+.menu_title {
+  font-weight: bold;
+  font-size: 26px;
+  margin: 22px 15px 15px -73px;
+  font-style: italic;
+}
+
+.starter_dishes {
+  animation: upward 500ms ease-in-out both;
+}
+
+.animation_menu {
+
+  top: 280px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 40px 20px 44px;
+  align-items: center;
+  background-color: var(--gray_dark);
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+}
+
+section h2 {
+  margin-bottom: 0;
+  font-size: small;
+  font-weight: lighter;
+}
+
+.image_menu {
+  width: auto;
+  margin: 12px 10px 15px -26px;
+  object-fit: cover
+}
+
+.image_menu_enchante {
+  width: 290px;
+  margin: -7px 10px 15px -26px;
+  height: 199px;
+  object-fit: cover
+}
+
 /*footer*/
 
 footer {
@@ -221,9 +359,33 @@ footer a {
   color: var(--white);
 }
 
+footer li:before {
+  display: none;
+}
+
+.footer_title {
+  font-weight: bold;
+  font-size: large;
+  margin: 10px 10px 10px 15px;
+}
+
+.fa-utensils:before,
+.fa-hands-helping:before {
+  margin: 10px 10px 10px 15px;
+}
+
 ul {
   display: flex;
   flex-direction: column;
+  margin: 10px 10px 15px -43px;
+}
+
+.footer_list,
+.notice,
+.messenger,
+  {
+  display: flex;
+  text-decoration: none;
 }
 
 .ustensil,
