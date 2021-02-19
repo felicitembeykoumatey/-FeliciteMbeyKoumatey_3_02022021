@@ -21,10 +21,11 @@
    <main>
      <header class="header">
 
-       <img src="images/logo/ohmyfood@2x.svg" alt="logo du site ohmyfood" class="logo_ohmyfood">
+       <nav class="navigator">
+         <img src="images/logo/ohmyfood@2x.svg" alt="logo du site ohmyfood" class="logo_ohmyfood">
+       </nav>
 
        <form class="search_form" role="search">
-
          <label>
            <i class="fas fa-map-marker-alt"></i>
          </label>
@@ -37,36 +38,36 @@
      <section class="research">
        <h1>Réservez le menu qui vous convient</h1>
        <p>Découvrez des restaurants d'exception, sélectionner par nos soins</p>
-       <button class="explore">Explorez nos restaurants</button>
+       <a href="#restaurants" class="explorer">Explorez nos restaurants</a>
      </section>
 
      <section class="function">
-       <h2>Fonctionnement</h2>
+       <h2 class="function_title">Fonctionnement</h2>
 
        <ol>
-         <li>
+         <li class="choice_restaurant">
            <i class="fas fa-mobile-alt"></i>
-           <P>Choisisez un restaurant</P>
+          Choisisez un restaurant
          </li>
 
-         <li>
+         <li class="main_eat">
            <i class="fas fa-list-ul"></i>
-           <p>Composez votre menu</p>
+           Composez votre menu
          </li>
 
-         <li>
+         <li class="delicious">
            <i class="fas fa-store"></i>
-           <p>Dégustez au restaurant</p>
+           Dégustez au restaurant
          </li>
        </ol>
      </section>
 
-     <section class="restaurants">
-       <h2>Restaurants</h2>
+     <section id="restaurants">
+       <h2 class="restaurants_title">Restaurants</h2>
 
        <div class="all_cards">
 
-         <a id="card" href="menu_la_palette_du_gout.html">
+         <a class="card" href="menu_la_palette_du_gout.html">
            <figure>
              <span class="notify-badge">Nouveau</span>
              <img src="images/restaurants/la_palette_du_goût.jpg" srcset="images/restaurants/la_palette_du_goût.jpg 5w,
@@ -76,7 +77,7 @@
 
              <figcaption class="card_detail">
                <section class="card_subtitles">
-                  <h3>La palette du goût</h3>
+                 <h3>La palette du goût</h3>
                  <h4>Ménilmontant</h4>
                </section>
                <i class="fas fa-heart"></i>
@@ -84,7 +85,7 @@
            </figure>
          </a>
 
-         <a id="card" href="menu_la_note_enchantee.html">
+         <a class="card" href="menu_la_note_enchantee.html">
            <figure>
              <span class="notify-badge">Nouveau</span>
              <img src="images/restaurants/la_note_enchantée.jpg" srcset="images/restaurants/la_note_enchantée.jpg 5w,
@@ -93,7 +94,7 @@
            images/restaurants/la_note_enchantée.jpg 3024w" sizes="100vw" alt class="enchanted_note">
 
              <figcaption class="card_detail">
-             <section class="card_subtitles">
+               <section class="card_subtitles">
                  <h2>La note enchantée</h2>
                  <h3>Charonne</h3>
                </section>
@@ -105,7 +106,7 @@
            </figure>
          </a>
 
-         <a id="card" href="menu_a_la_francaise.html">
+         <a class="card" href="menu_a_la_francaise.html">
            <figure>
              <img src="images/restaurants/plat_a_la_francaise.jpg" srcset="images/restaurants/plat_a_la_française.jpg 492w,
            images/restaurants/plat_a_la_française.jpg 984w,
@@ -113,18 +114,18 @@
            images/restaurants/plat_a_la_française.jpg 3936w" sizes="100vw" alt class="card_french">
 
              <figcaption class="card_detail">
-                <section class="card_subtitles">
+               <section class="card_subtitles">
                  <h3>À la française</h3>
                  <h4>Cité Rouge</h4>
-                </section>
-            
+               </section>
+
                <i class="fas fa-heart"></i>
 
              </figcaption>
            </figure>
          </a>
 
-         <a id="card" href="menu_la_delice_des_sens.html">
+         <a class="card" href="menu_la_delice_des_sens.html">
            <figure>
              <img src="images/restaurants/les_délices_du_sens.jpg" srcset="images/restaurants/les_délices_du_sens.jpg 630w,
            images/restaurants/les_délices_du_sens.jpg 1260w,
@@ -132,10 +133,10 @@
         images/restaurants/les_délices_du_sens.jpg 5040w" sizes="100vw" alt class="card_delicacies">
 
              <figcaption class="card_detail">
-              <section class="card_subtitles">
+               <section class="card_subtitles">
                  <h3>Les délices des sens</h3>
                  <h4>Folie-Méricourt</h4>
-              </section>
+               </section>
 
                <i class="fas fa-heart"></i>
 
