@@ -160,10 +160,6 @@ li:before {
   margin: 0 10px 15px 9px;
 }
 
-div {
-  width: auto;
-}
-
 #restaurants {
   width: auto;
   padding: 0 10px 10px 10px;
@@ -198,15 +194,6 @@ div {
   font-weight: bold;
 }
 
-p {
-  margin: 8px 15px 15px 7px;
-  width: auto;
-}
-
-section {
-  width: auto;
-}
-
 .function_list_number {
   color: var(--white);
   background-color: var(--purple);
@@ -233,15 +220,10 @@ section .restaurants,
   padding: 20px 10px 15px 8px;
 }
 
-
-figcaption {
+main figure figcaption {
   display: flex;
-}
-
-h3 {
-  font-weight: bold;
-  margin: 1px 0 0px 0;
-  font-size: medium;
+  justify-content: space-between;
+  padding: 15px;
 }
 
 .notify-badge {
@@ -262,9 +244,7 @@ h3 {
   border-radius: 15px 15px 0 0;
   box-shadow: none;
   object-fit: cover;
-  padding: 10px 12px 10px 12px;
-  width: 46%;
-  margin: 11px 10px 15px -32px;
+  width: 100%;
 }
 
 .pallette_of_taste,
@@ -282,28 +262,19 @@ h3 {
   background-color: var(--white);
   border-radius: 15px;
 }
-
-
 .all_cards {
   width: auto;
 }
 
-.fas .fa-heart:hover {
-  position: relative;
-  right: 37px;
-  color: var(--pink);
-}
 
 main figure a {
   color: var(--black);
   text-decoration: none;
 }
-main figure section{
-      display: flex;
-    justify-content: space-between;
-    padding: 15px;
-}
-figure{
+
+
+
+figure {
   display: flex;
 }
 
@@ -432,73 +403,24 @@ ul {
   body {
     width: auto
   }
-
-  .card_detail {
-    width: 93%;
-  }
-
-  .enchanted_note {
-    margin: 11px 10px 15px -31px;
-    width: 233px;
-  }
-
-  .image_menu {
-    width: auto;
-    margin: -15px 10px 15px -39px;
-    object-fit: cover;
-    height: 201px;
-  }
 }
 
 /*mobile_m*/
 @media screen and (min-width: 375px) {
 
-  .notify-badge {
-    right: 100px;
-  }
 
-  .pallette_of_taste,
-  .card_french,
-  .card_delicacies {
-    width: 284px;
-  }
-
-  .enchanted_note {
-    width: 285px;
-  }
 }
 
 /*mobile_l*/
 @media screen and (min-width: 425px) {
 
-  .notify-badge {
-    right: 397px;
-  }
+
 }
 
 
 /*tablette*/
 @media screen and (min-width: 768px) {
 
-  .pallette_of_taste,
-  .card_french,
-  .card_delicacies {
-    width: 40%;
-  }
-
-  .notify-badge {
-    right: 433px;
-  }
-
-  .enchanted_note {
-    width: 38%;
-  }
-
-  figcaption {
-    margin: -28px 8px 7px 21px;
-    width: 37%;
-    height: 38px;
-  }
 }
 
 /*laptop*/
