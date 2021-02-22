@@ -10,14 +10,14 @@
 }
 
 html {
- width:auto;
+  width: auto;
 }
 
 /* body */
+html,
 body {
   color: var(--black);
   font-family: "Roboto", sans-serif;
-  min-width: 360px;
   width: auto;
 }
 
@@ -53,9 +53,67 @@ header {
   width: auto;
 }
 
+/*research*/
+
+.search_form_text {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: medium;
+  width: auto;
+  justify-content: center;
+  color: var(--black);
+}
+
+
+form.search_form {
+  display: flex;
+  background-color: var(--gray);
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  font-weight: bold;
+
+}
+
+.explorer {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  margin: 24px 15px 15px 12px;
+  border: 0;
+  padding: 12px 4px 14px 13px;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 100px;
+  color: var(--white);
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9));
+  cursor: pointer;
+  transition-duration: .50s;
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+  width: 75%;
+}
+
+.research {
+  background-color: var(--gray_dark);
+  padding: 10px 0 10px 0;
+  width: auto;
+}
+
+.title {
+  font-family: "Shrikhand";
+}
+
 /*Fonctionnement*/
+.function_card {
+  margin: -14px 12px 12px -33px;
+  width: 338px;
+  padding: 0px 10px 15px 0px;
+}
+
 ol {
-  counter-reset (funtions);
+  counter-reset: funtions;
 }
 
 li {
@@ -98,15 +156,20 @@ li:before {
   align-items: center;
   background-color: var(--gray_dark);
   border-radius: 20px;
-  margin-right: 25px;
-  margin-top: 25px;
-  width: auto;
-  height: 60px;
-  box-shadow: 0 0px 15px rgb(0 0 0 / 20%);
+  width: 97%;
   cursor: pointer;
   transition: 200ms ease-in-out;
   font-weight: bold;
+  margin: 0 10px 15px 9px;
+}
 
+div {
+  width: auto;
+}
+
+#restaurants {
+  width: auto;
+  padding: 0 10px 10px 10px;
 }
 
 .fa-list-ul,
@@ -130,84 +193,22 @@ li:before {
   color: var(--purple);
 }
 
-.function_title,
-.restaurants_title {
-  display: flex;
-  font-size: large;
-  font-weight: bold;
-}
-
 .research_title {
   display: flex;
   padding: 0 4px 12px 0;
-  margin: 12px 12px 10px 26px;
-  width: auto;
+  margin: 12px 12px 10px 6px;
+  width: 80%;
   font-weight: bold;
+}
+
+p {
+    margin: 8px 15px 15px 7px;
+    width: auto;
 }
 
 section {
   width: auto;
 }
-
-p {
-  display: flex;
-  font-weight: 400;
-  margin: 15px 15px 15px 25px;
-}
-
-/*research*/
-
-.search_form_text {
-  background: none;
-  border: none;
-  font-weight: bold;
-  font-size: medium;
-  width: auto;
-  justify-content: center;
-  color: var(--black);
-}
-
-
-form.search_form {
-  display: flex;
-  background-color: var(--gray);
-  height: 50px;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  font-weight: bold;
-
-}
-
-.explorer {
-  display: flex;
-  text-decoration: none;
-  justify-content: center;
-  margin: 24px 15px 15px 70px;
-  border: 0;
-  padding: 15px 15px 15px 15px;
-  font-weight: bold;
-  font-size: medium;
-  border-radius: 100px;
-  color: var(--white);
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9));
-  cursor: pointer;
-  transition-duration: .50s;
-  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
-  width: auto;
-}
-
-.research {
-  background-color: var(--gray_dark);
-  padding: 10px 0 10px 0;
-  width: auto;
-}
-
-.title {
-  font-family: "Shrikhand";
-}
-
-/*Function*/
 
 .function_list_number {
   color: var(--white);
@@ -220,26 +221,45 @@ form.search_form {
 
 /*restaurants*/
 
-.restaurants {
+section .restaurants,
+.all_cards {
   background-color: var(--gray);
   width: auto;
 }
 
-figcaption {
-  background-color: var(--white);
-  border-radius: 0 0 10px 10px;
-  padding: 0 10px 26px 10px;
-  margin: -28px 8px 7px 14px;
-  width: 70%;
-  height: 40px;
+.restaurants_title,
+.function_title {
+  margin: 15px 10px 15px 12px;
+  font-size: medium;
+  font-weight: bold;
+  width: auto;
+  padding: 20px 10px 15px 8px;
 }
 
+.card_detail {
+  background-color: var(--white);
+  border-radius: 0 0 10px 10px;
+  margin: -28px 8px 7px -20px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  width: 41%;
+}
+
+figcaption {
+  display: flex;
+}
+
+h3 {
+    font-weight: bold;
+    margin: 1px 0 0px 0;
+    font-size: medium;
+}
 .notify-badge {
   position: absolute;
   background-color: var(--green);
-  right: 37px;
-  width: auto;
-  text-align: center;
+  right: 74px;
   line-height: 2rem;
   font-size: small;
   color: var(--white);
@@ -249,26 +269,26 @@ figcaption {
 
 .enchanted_note {
   display: flex;
-  height: 193px;
+  height: 130px;
   border-radius: 15px 15px 0 0;
   box-shadow: none;
   object-fit: cover;
   padding: 10px 12px 10px 12px;
-  margin: 15px 10px 15px 1px;
-  width: 76%;
+  width: 46%;
+  margin: 11px 10px 15px -32px;
 }
 
 .pallette_of_taste,
 .card_french,
 .card_delicacies {
   display: flex;
-  height: 130px;
+  height: 115px;
   border-radius: 15px 15px 0 0;
   box-shadow: none;
   object-fit: cover;
   padding: 10px 12px 10px 12px;
-  margin: -7px 10px 15px 9px;
-  width: 73%;
+  margin: -7px 10px 15px -31px;
+  width: 218px;
 }
 
 .card {
@@ -285,13 +305,15 @@ figcaption {
   width: auto;
 }
 
-
 .fa-heart:hover {
   position: relative;
   right: 37px;
   color: var(--pink);
+}
 
-
+main figure a {
+  color: var(--black);
+  text-decoration: none;
 }
 
 /*4 menus*/
@@ -314,7 +336,6 @@ figcaption {
 }
 
 .animation_menu {
-
   top: 280px;
   display: flex;
   justify-content: space-between;
@@ -342,6 +363,24 @@ section h2 {
   margin: -7px 10px 15px -26px;
   height: 199px;
   object-fit: cover
+}
+
+.Order-dishes {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  margin: 24px 15px 15px 6px;
+  border: 0;
+  padding: 12px 4px 14px 13px;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 100px;
+  color: var(--white);
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9));
+  cursor: pointer;
+  transition-duration: .50s;
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+  width: 85%;
 }
 
 /*footer*/
@@ -382,8 +421,7 @@ ul {
 
 .footer_list,
 .notice,
-.messenger,
-  {
+.messenger {
   display: flex;
   text-decoration: none;
 }
@@ -403,6 +441,21 @@ ul {
   body {
     width: auto
   }
+
+  .card_detail {
+    width: 93%;
+  }
+
+  .enchanted_note {
+    margin: 11px 10px 15px -31px;
+    width: 220px;
+  }
+  .image_menu {
+    width: auto;
+    margin: -15px 10px 15px -39px;
+    object-fit: cover;
+    height: 201px;
+}
 }
 
 /*mobile_m*/
@@ -422,55 +475,57 @@ ul {
     }
 
     .notify-badge {
-      right: 115px;
+      right: 397px;
     }
   }
+}
 
-  /*tablette*/
-  @media screen and (min-width: 768px) {
-    body {
-      width: auto
-    }
-
-    .pallette_of_taste,
-    .card_french,
-    .card_delicacies {
-      width: 40%;
-    }
-
-    .notify-badge {
-      right: 433px;
-    }
-
-    .enchanted_note {
-      width: 38%;
-    }
-
-    figcaption {
-      margin: -28px 8px 7px 21px;
-      width: 37%;
-      height: 38px;
-    }
+/*tablette*/
+@media screen and (min-width: 768px) {
+  body {
+    width: auto
   }
 
-  /*laptop*/
-  @media screen and (min-width: 1024px) {
-
-    body {
-      width: auto
-    }
+  .pallette_of_taste,
+  .card_french,
+  .card_delicacies {
+    width: 40%;
   }
 
-  /*laptop_l*/
-  @media screen and (min-width: 1440px) {
-    body {
-      width: auto
-    }
+  .notify-badge {
+    right: 433px;
   }
 
-  /*4k*/
-  @media screen and (min-width: 2560px) {
-    body {
-      width: auto
-    }
+  .enchanted_note {
+    width: 38%;
   }
+
+  figcaption {
+    margin: -28px 8px 7px 21px;
+    width: 37%;
+    height: 38px;
+  }
+}
+
+/*laptop*/
+@media screen and (min-width: 1024px) {
+
+  body {
+    width: auto
+  }
+}
+
+/*laptop_l*/
+@media screen and (min-width: 1440px) {
+  body {
+    width: auto
+  }
+}
+
+/*4k*/
+@media screen and (min-width: 2560px) {
+  body {
+    width: auto
+  }
+}
+}
