@@ -9,16 +9,13 @@
   --thistle: #D8BFD8;
 }
 
-html {
-  width: auto;
-}
 
 /* body */
 html,
 body {
   color: var(--black);
   font-family: "Roboto", sans-serif;
-  width: auto;
+  min-width: 320px;
 }
 
 /* main */
@@ -202,8 +199,8 @@ div {
 }
 
 p {
-    margin: 8px 15px 15px 7px;
-    width: auto;
+  margin: 8px 15px 15px 7px;
+  width: auto;
 }
 
 section {
@@ -236,35 +233,27 @@ section .restaurants,
   padding: 20px 10px 15px 8px;
 }
 
-.card_detail {
-  background-color: var(--white);
-  border-radius: 0 0 10px 10px;
-  margin: -28px 8px 7px -20px;
-  height: 40px;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  width: 41%;
-}
 
 figcaption {
   display: flex;
 }
 
 h3 {
-    font-weight: bold;
-    margin: 1px 0 0px 0;
-    font-size: medium;
+  font-weight: bold;
+  margin: 1px 0 0px 0;
+  font-size: medium;
 }
+
 .notify-badge {
   position: absolute;
   background-color: var(--green);
-  right: 74px;
+  right: 50px;
   line-height: 2rem;
   font-size: small;
   color: var(--white);
   padding: 0 12px 5px 5px;
   margin: 15px 12px 0 0;
+  border-radius: 5px 5px 5px 5px;
 }
 
 .enchanted_note {
@@ -286,9 +275,7 @@ h3 {
   border-radius: 15px 15px 0 0;
   box-shadow: none;
   object-fit: cover;
-  padding: 10px 12px 10px 12px;
-  margin: -7px 10px 15px -31px;
-  width: 218px;
+  width: 233px;
 }
 
 .card {
@@ -296,16 +283,12 @@ h3 {
   border-radius: 15px;
 }
 
-.cards {
-  display: flex;
-  border-radius: 10px 10px 10px;
-}
 
 .all_cards {
   width: auto;
 }
 
-.fa-heart:hover {
+.fas .fa-heart:hover {
   position: relative;
   right: 37px;
   color: var(--pink);
@@ -314,6 +297,14 @@ h3 {
 main figure a {
   color: var(--black);
   text-decoration: none;
+}
+main figure section{
+      display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+figure{
+  display: flex;
 }
 
 /*4 menus*/
@@ -448,43 +439,46 @@ ul {
 
   .enchanted_note {
     margin: 11px 10px 15px -31px;
-    width: 220px;
+    width: 233px;
   }
+
   .image_menu {
     width: auto;
     margin: -15px 10px 15px -39px;
     object-fit: cover;
     height: 201px;
-}
+  }
 }
 
 /*mobile_m*/
 @media screen and (min-width: 375px) {
-  body {
-    width: auto
-  }
 
   .notify-badge {
     right: 100px;
   }
 
-  /*mobile_l*/
-  @media screen and (min-width: 425px) {
-    body {
-      width: auto
-    }
+  .pallette_of_taste,
+  .card_french,
+  .card_delicacies {
+    width: 284px;
+  }
 
-    .notify-badge {
-      right: 397px;
-    }
+  .enchanted_note {
+    width: 285px;
   }
 }
 
+/*mobile_l*/
+@media screen and (min-width: 425px) {
+
+  .notify-badge {
+    right: 397px;
+  }
+}
+
+
 /*tablette*/
 @media screen and (min-width: 768px) {
-  body {
-    width: auto
-  }
 
   .pallette_of_taste,
   .card_french,
@@ -508,24 +502,10 @@ ul {
 }
 
 /*laptop*/
-@media screen and (min-width: 1024px) {
-
-  body {
-    width: auto
-  }
-}
+@media screen and (min-width: 1024px) {}
 
 /*laptop_l*/
-@media screen and (min-width: 1440px) {
-  body {
-    width: auto
-  }
-}
+@media screen and (min-width: 1440px) {}
 
 /*4k*/
-@media screen and (min-width: 2560px) {
-  body {
-    width: auto
-  }
-}
-}
+@media screen and (min-width: 2560px) {}
