@@ -9,37 +9,35 @@
   --thistle: #D8BFD8;
 }
 
-
 /* body */
 html,
 body {
   color: var(--black);
   font-family: "Roboto", sans-serif;
   min-width: 320px;
+  margin: 0;
 }
-
-/* main */
 
 /* header */
-
-main {
-  width: auto;
-}
-
 header {
   box-shadow: 0 0 0.5rem rgb(0 0 0 / 20%);
   position: relative;
   z-index: 1000;
 }
 
-/* nav */
-
-.navigator {
-  justify-content: center;
-  width: auto;
+.function {
   flex-direction: row;
   align-items: center;
   background-color: var(--white);
+}
+
+/* main */
+
+main {
+  width: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
 }
 
 .logo_ohmyfood {
@@ -61,7 +59,6 @@ header {
   justify-content: center;
   color: var(--black);
 }
-
 
 form.search_form {
   display: flex;
@@ -108,7 +105,10 @@ form.search_form {
   width: 338px;
   padding: 0px 10px 15px 0px;
 }
-
+.function_title{
+  font-size: medium;
+  font-weight: bold;
+}
 ol {
   counter-reset: funtions;
 }
@@ -205,25 +205,27 @@ li:before {
 
 /*restaurants*/
 
-section .restaurants,
-.all_cards {
-  background-color: var(--gray);
-  width: auto;
+main figure {
+  align-self: center;
+  background-color: var(--white);
+  border-radius: 20px;
+  margin: 10px 0;
+  width: 335px;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2);
+  transition: 200ms ease-out;
 }
 
-.restaurants_title,
-.function_title {
-  margin: 15px 10px 15px 12px;
-  font-size: medium;
-  font-weight: bold;
-  width: auto;
-  padding: 20px 10px 15px 8px;
+main figure a {
+  color: var(--black);
+  text-decoration: none;
 }
 
-main figure figcaption {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
+main figure img {
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 175px;
+  width: 100%;
 }
 
 .notify-badge {
@@ -238,45 +240,21 @@ main figure figcaption {
   border-radius: 5px 5px 5px 5px;
 }
 
-.enchanted_note {
+main figure div {
   display: flex;
-  height: 130px;
-  border-radius: 15px 15px 0 0;
-  box-shadow: none;
-  object-fit: cover;
-  width: 100%;
+  justify-content: space-between;
+  padding: 15px;
 }
 
-.pallette_of_taste,
-.card_french,
-.card_delicacies {
-  display: flex;
-  height: 115px;
-  border-radius: 15px 15px 0 0;
-  box-shadow: none;
-  object-fit: cover;
-  width: 233px;
+main figure h3,
+main figure p {
+  margin: 0;
 }
 
-.card {
-  background-color: var(--white);
-  border-radius: 15px;
-}
-.all_cards {
-  width: auto;
+main figure h3 {
+  font-size: medium;
 }
 
-
-main figure a {
-  color: var(--black);
-  text-decoration: none;
-}
-
-
-
-figure {
-  display: flex;
-}
 
 /*4 menus*/
 .menu_main {
@@ -398,6 +376,8 @@ ul {
 
 
 
+
+
 /*mobile_s*/
 @media screen and (min-width: 320px) {
   body {
@@ -406,22 +386,14 @@ ul {
 }
 
 /*mobile_m*/
-@media screen and (min-width: 375px) {
-
-
-}
+@media screen and (min-width: 375px) {}
 
 /*mobile_l*/
-@media screen and (min-width: 425px) {
-
-
-}
+@media screen and (min-width: 425px) {}
 
 
 /*tablette*/
-@media screen and (min-width: 768px) {
-
-}
+@media screen and (min-width: 768px) {}
 
 /*laptop*/
 @media screen and (min-width: 1024px) {}
