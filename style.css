@@ -178,38 +178,45 @@ li:before {
 .main_eat,
 .delicious {
   display: flex;
+  align-items: center; 
+  margin: 0 10px 15px 9px; 
+  border-radius: 20px;
   width: 100%;
-  transition: 200ms ease-in-out;
   font-weight: bold;
   background-color: var(--gray_dark);
   cursor: pointer;
-  align-items: center;
-  margin: 0 10px 15px 9px;
-  border-radius: 20px;
 }
 
-#restaurants {
+.restaurants {
   padding: 0 10px 10px 10px;
   width: auto;
 }
 
-.heart-color:hover {
-  z-index: -1;
+
+.heart-empty:hover{
+display: none;
+
+}
+.heart-full{
+display: none;
+}
+.heart-full:hover{
   position: absolute;
-  left: 0;
-  top: 0;
+  top: 0; 
+   left: 0;
+  z-index: -1;
   background: linear-gradient(180deg, var(--purple) 0%, var(--pink) 100%);
-  cursor: pointer;
+   opacity: 0; 
   -webkit-text-fill-color: transparent;
-  opacity: 0;
   transform: scale(0);
-  transition: 0.3s ease;
+  transition: transform  0.3s ease;
+  cursor: pointer;
 }
 
-.heart:hover .heart-color {
-  transform: scale(1);
-  opacity: 1;
+.heart-empty:hover ~ .heart-full{
+display:block;
 }
+
 
 .fa-list-ul,
 .fa-store,
@@ -375,13 +382,13 @@ main figure h3 {
   display: flex;
   transform: rotate(180deg);
   transition-duration: 0.5s;
-   justify-content: center;
+  justify-content: center;
   height: 30px;
   width: auto;
   background-color: var(--white);
   align-items: center;
   border-radius: 100px;
- 
+
 
 }
 
