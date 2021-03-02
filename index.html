@@ -1,5 +1,6 @@
  <!DOCTYPE html>
  <html lang="fr">
+
  <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +15,11 @@
  </head>
 
  <body>
+   <div class="load-container">
+     <div class="preloader">
+       <span class="lds-dual-ring"></span>
+     </div>
+   </div>
    <main>
      <header class="header">
        <nav class="navigator">
@@ -36,6 +42,7 @@
 
      <section class="function">
        <h2 class="function_title">Fonctionnement</h2>
+
        <div class="function_card">
          <ol>
            <li class="choice_restaurant">
@@ -56,76 +63,99 @@
        </div>
      </section>
 
-     <div class="all_cards">
-       <div id="restaurants">
-         <h2 class="restaurants_title">Restaurants</h2>
-         <figure>
-           <a class="card" href="menu_la_palette_du_gout.html">
-             <span class="notify-badge">Nouveau</span>
-             <img src="images/restaurants/la_palette_du_goût.jpg" srcset="images/restaurants/la_palette_du_goût.jpg 5w,
+     <section class="all_cards" id="restaurants">
+       <h2 class="restaurants_title">Restaurants</h2>
+       <figure>
+         <a class="card" href="views/menu_la_palette_du_gout.html">
+           <span class="notify-badge">Nouveau</span>
+
+           <img src="images/restaurants/la_palette_du_goût.jpg" srcset="images/restaurants/la_palette_du_goût.jpg 5w,
           images/restaurants/la_palette_du_goût.jpg 10w,
           images/restaurants/la_palette_du_goût.jpg 20w,
            images/restaurants/la_palette_du_goût.jpg 4402w" sizes="100vw" alt class="pallette_of_taste">
-             <div>
-               <section>
-                 <h3>La palette du goût</h3>
-                 <p>Ménilmontant</p>
-               </section>
-               <i class="fas fa-heart fa-2x"></i>
-             </div>
-           </a>
-         </figure>
+           <article>
 
-         <figure>
-           <a class="card" href="menu_la_note_enchantee.html">
-             <span class="notify-badge">Nouveau</span>
-             <img src="images/restaurants/la_note_enchantée.jpg" srcset="images/restaurants/la_note_enchantée.jpg 5w,
+             <h3>La palette du goût</h3>
+             <p>Ménilmontant</p>
+
+               <i class="far fa-heart"></i>        
+               <i class="fas fa-heart"></i>
+        
+           </article>
+         </a>
+       </figure>
+
+       <figure>
+         <a class="card" href="views/menu_la_note_enchantee.html">
+           <span class="notify-badge">Nouveau</span>
+
+           <img src="images/restaurants/la_note_enchantée.jpg" srcset="images/restaurants/la_note_enchantée.jpg 5w,
            images/restaurants/la_note_enchantée.jpg 10w,
            images/restaurants/la_note_enchantée.jpg 20w,
            images/restaurants/la_note_enchantée.jpg 3024w" sizes="100vw" alt class="enchanted_note">
-             <div>
-               <section>
-                 <h3>La note enchantée</h3>
-                 <p>Charonne</p>
-               </section>
-               <i class="fas fa-heart fa-2x"></i>
-             </div>
-           </a>
-         </figure>
 
-         <figure>
-           <a class="card" href="menu_a_la_francaise.html">
-             <img src="images/restaurants/plat_a_la_francaise.jpg" srcset="images/restaurants/plat_a_la_française.jpg 492w,
+           <article>
+             <h3>La note enchantée</h3>
+             <p>Charonne</p>
+
+          
+               <i class="far fa-heart"></i>        
+               <i class="far fa-heart"></i>
+           
+             
+           </article>
+         </a>
+       </figure>
+
+       <figure>
+         <a class="card" href="views/menu_a_la_francaise.html">
+           <img src="images/restaurants/plat_a_la_francaise.jpg" srcset="images/restaurants/plat_a_la_française.jpg 492w,
            images/restaurants/plat_a_la_française.jpg 984w,
            images/restaurants/plat_a_la_française.jpg 1968w,
            images/restaurants/plat_a_la_française.jpg 3936w" sizes="100vw" alt class="card_french">
-             <div>
-               <section>
-                 <h3> A la Française </h3>
-                 <p>Cité Rouge</p>
-               </section>
-               <i class="fas fa-heart fa-2x"></i>
-             </div>
-           </a>
-         </figure>
+           <div>
+             <article>
 
-         <figure>
-           <a class="card" href="menu_la_delice_des_sens.html">
-             <img src="images/restaurants/les_délices_du_sens.jpg" srcset="images/restaurants/les_délices_du_sens.jpg 630w,
+               <h3> A la Française </h3>
+               <p>Cité Rouge</p>
+
+   
+               <i class="far fa-heart" aria-hidden="true"></i>        
+  
+               <i class="far fa-heart" aria-hideb="true"></i>
+  
+             
+
+             </article>
+        
+         </a>
+       </figure>
+
+       <figure>
+         <a class="card" href="views/menu_la_delice_des_sens.html">
+           <img src="images/restaurants/les_délices_du_sens.jpg" srcset="images/restaurants/les_délices_du_sens.jpg 630w,
            images/restaurants/les_délices_du_sens.jpg 1260w,
            images/restaurants/les_délices_du_sens.jpg 2520w,
         images/restaurants/les_délices_du_sens.jpg 5040w" sizes="100vw" alt class="card_delicacies">
-             <div>
-               <section>
-                 <h3>Les délices des sens</h3>
-                 <p>Folie-Méricourt</p>
-               </section>
-               <i class="fas fa-heart fa-2x"></i>
-             </div>
-           </a>
-         </figure>
-       </div>
-     </div>
+
+           <article>
+
+             <h3>Les délices des sens</h3>
+             <p>Folie-Méricourt</p>
+
+           
+               <i class="far fa-heart" aria-hidden="true"></i>        
+           
+            
+               <i class="far fa-heart" aria-hideb="true"></i>
+         
+             
+          
+
+           </article>
+         </a>
+       </figure>
+     </section>
 
    </main>
 
