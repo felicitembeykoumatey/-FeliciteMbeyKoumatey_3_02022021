@@ -414,16 +414,6 @@ ul {
   border-top-right-radius: 45px;
 }
 
-.opacity {
-  display: flex;
-  margin: auto;
-  width: 75%;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: var(--white);
-  font-family: "Roboto", sans-serif;
-}
 
 .order-dishes {
   display: flex;
@@ -528,6 +518,7 @@ ul {
 /*tablets*/
 @media (min-width: 768px) {
   figure {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -550,6 +541,7 @@ ul {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+
 }
 
 }
