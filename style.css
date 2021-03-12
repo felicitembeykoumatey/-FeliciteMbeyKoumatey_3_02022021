@@ -481,9 +481,28 @@ menu:hover {
 .menu_title {
   margin: 0px;
   font-family: "Shrikhand", cursive;
+  font-weight: 900;
+  font-size: large;
+}
+
+.meal {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas: "text1 .""text2 price";
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0 10px;
+  width: 100%;
+}
+.meal h3:nth-child(1) {
+  grid-area: text1;
+  margin: 15px 0 5px 15px;
   font-weight: bold;
-  font-size: 30px;
-  font-style: italic;
+  font-size: medium;
+}
+ .meal p:nth-child(2) {
+    grid-area: text2;
+    margin: 0 0 15px 0;
 }
 
 .animation_starter {
