@@ -197,6 +197,13 @@ main figure h3 {
   font-size: medium;
 }
 
+hr {
+  width: 2.5rem;
+  border-top: 3px solid var(--green);
+  margin:-14px 0 0 0;
+
+}
+
 /*footer*/
 
 footer {
@@ -465,6 +472,7 @@ menu:hover {
   -webkit-transform: rotate(-360deg);
   transform: rotate(-360deg);
 }
+
 .starter_dishe {
   -webkit-animation: slideUp 500ms ease-in-out both;
   animation: slideUp 500ms ease-in-out both;
@@ -535,6 +543,18 @@ menu:hover {
 
 }
 
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--green);
+  border-radius: 0 12px 12px 0;
+  color: var(--white);
+  width: 0;
+  right: 0;
+  overflow: hidden;
+  transition: width 400ms ease-in-out;
+}
 
 
 /*footer*/
