@@ -155,16 +155,6 @@ li:before {
 
 /*restaurants*/
 
-main figure {
-  margin: 10px 10px 10px 15px;
-  width: 300px;
-  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2);
-  transition: 200ms ease-out;
-  align-self: center;
-  border-radius: 20px;
-  background-color: var(--white);
-}
-
 main figure a {
   color: var(--black);
   text-decoration: none;
@@ -172,14 +162,8 @@ main figure a {
 
 main figure img {
   object-fit: cover;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  height: 175px;
-  width: 100%;
-}
-
-article {
-  margin: 10px 10px 12px 12px;
+  width: auto;
+  margin: -15px -7px 10px -40px;
 }
 
 main figure div {
@@ -227,6 +211,15 @@ ul {
   display: flex;
   flex-direction: column;
   margin: 10px 10px 15px -43px;
+}
+
+/*4 menus*/
+
+h2 {
+  margin-bottom: 20px;
+  font-size: medium;
+  font-weight: lighter;
+  text-transform: uppercase;
 }
 
 /*loader*/
@@ -463,6 +456,10 @@ ul {
   box-shadow: 12px 12px 2px 1px rgb(1 2 43 / 19%);
 }
 
+.main_dishe {
+  width: auto;
+}
+
 menu:hover {
   -webkit-transform: translate(0px);
   transform: translate(0px);
@@ -486,26 +483,33 @@ menu:hover {
 }
 
 .meal {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-areas: "text1 .""text2 price";
+  display: flex;
   flex-wrap: nowrap;
   margin: 0;
   padding: 0 10px;
   width: 100%;
 }
+
 .meal h3:nth-child(1) {
-  grid-area: text1;
   margin: 15px 0 5px 15px;
   font-weight: bold;
   font-size: medium;
 }
- .meal p:nth-child(2) {
-    grid-area: text2;
-    margin: 0 0 15px 0;
+
+.meal p:nth-child(2) {
+  font-size: small;
 }
 
-.animation_starter {
+.meal b:nth-child(3) {
+  display: flex;
+  justify-content: flex-end;
+  margin: -35px 12px 0px 302px;
+  font-weight: bold;
+}
+
+.animation_starter,
+.animation_dishe,
+.animation_desserts {
   position: relative;
   background-color: var(--white);
   height: 70px;
@@ -528,241 +532,9 @@ menu:hover {
   animation: slideUp 500ms 0.2s ease-in-out both;
 }
 
-.animation_starter2 {
-  position: relative;
-  background-color: var(--white);
-  height: 70px;
-  padding: 0 0 15px 0;
-  margin: 1rem 0 12px 0;
-  cursor: pointer;
-  overflow: hidden;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  border-radius: 1.5rem;
-  -webkit-box-shadow: 3px 3px 10px #dedada;
-  box-shadow: 3px 3px 10px #dedada;
-  grid-column-start: 2;
-  opacity: 0;
-  -webkit-animation: slideUp 500ms 0.6s ease-in-out both;
-  animation: slideUp 500ms 0.6s ease-in-out both;
-  -webkit-animation: slideUp 500ms 0.3s ease-in-out both;
-  animation: slideUp 500ms 0.3s ease-in-out both;
-}
-
-.animation_starter3 {
-  position: relative;
-  background-color: var(--white);
-  height: 70px;
-  padding: 0 0 15px 0;
-  margin: 1rem 0 12px 0;
-  cursor: pointer;
-  overflow: hidden;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  border-radius: 1.5rem;
-  -webkit-box-shadow: 3px 3px 10px #dedada;
-  box-shadow: 3px 3px 10px #dedada;
-  grid-column-start: 2;
-  opacity: 0;
-  -webkit-animation: slideUp 500ms 0.6s ease-in-out both;
-  animation: slideUp 500ms 0.6s ease-in-out both;
-  -webkit-animation: slideUp 0.4s ease-in-out both;
-  animation: slideUp 500ms 0.4s ease-in-out both;
-}
-
-.animation_starter4 {
-  position: relative;
-  background-color: var(--white);
-  height: 70px;
-  padding: 0 0 15px 0;
-  margin: 1rem 0 12px 0;
-  cursor: pointer;
-  overflow: hidden;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  border-radius: 1.5rem;
-  -webkit-box-shadow: 3px 3px 10px #dedada;
-  box-shadow: 3px 3px 10px #dedada;
-  grid-column-start: 2;
-  opacity: 0;
-  -webkit-animation: slideUp 500ms 0.6s ease-in-out both;
-  animation: slideUp 500ms 0.6s ease-in-out both;
-  -webkit-animation: slideUp 500ms 0.5s ease-in-out both;
-  animation: slideUp 500ms 0.5s ease-in-out both;
-}
-
-.animation_dishe {
-  position: relative;
-  background-color: var(--white);
-  height: 70px;
-  padding: 0 0 15px 0;
-  margin: 1rem 0 12px 0;
-  cursor: pointer;
-  overflow: hidden;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  border-radius: 1.5rem;
-  -webkit-box-shadow: 3px 3px 10px #dedada;
-  box-shadow: 3px 3px 10px #dedada;
-  grid-column-start: 2;
-  opacity: 0;
-  -webkit-animation: slideUp 500ms 0.6s ease-in-out both;
-  animation: slideUp 500ms 0.6s ease-in-out both;
-}
-
-.animation_dishe2 {
-  position: relative;
-  background-color: var(--white);
-  height: 70px;
-  padding: 0 0 15px 0;
-  margin: 1rem 0 12px 0;
-  cursor: pointer;
-  overflow: hidden;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  border-radius: 1.5rem;
-  -webkit-box-shadow: 3px 3px 10px #dedada;
-  box-shadow: 3px 3px 10px #dedada;
-  grid-column-start: 2;
-  opacity: 0;
-  -webkit-animation: slideUp 500ms 0.6s ease-in-out both;
-  animation: slideUp 500ms 0.6s ease-in-out both;
-  -webkit-animation: slideUp 500ms 0.7s ease-in-out both;
-  animation: slideUp 500ms 0.7s ease-in-out both;
-}
-
-.animation_dishe3 {
-  position: relative;
-  background-color: var(--white);
-  height: 70px;
-  padding: 0 0 15px 0;
-  margin: 1rem 0 12px 0;
-  cursor: pointer;
-  overflow: hidden;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  border-radius: 1.5rem;
-  -webkit-box-shadow: 3px 3px 10px #dedada;
-  box-shadow: 3px 3px 10px #dedada;
-  grid-column-start: 2;
-  opacity: 0;
-  -webkit-animation: slideUp 500ms 0.6s ease-in-out both;
-  animation: slideUp 500ms 0.6s ease-in-out both;
-  -webkit-animation: slideUp 500ms 0.8s ease-in-out both;
-  animation: slideUp 500ms 0.8s ease-in-out both;
-}
-
 .desserts {
   -webkit-animation: slideUp 500ms 0.9s ease-in-out both;
   animation: slideUp 500ms 0.9s ease-in-out both;
-
-}
-
-.animation_desserts {
-  position: relative;
-  background-color: var(--white);
-  height: 70px;
-  padding: 0 0 15px 0;
-  margin: 1rem 0 12px 0;
-  cursor: pointer;
-  overflow: hidden;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  border-radius: 1.5rem;
-  -webkit-box-shadow: 3px 3px 10px #dedada;
-  box-shadow: 3px 3px 10px #dedada;
-  grid-column-start: 2;
-  opacity: 0;
-  -webkit-animation: slideUp 500ms 0.6s ease-in-out both;
-  animation: slideUp 500ms 0.6s ease-in-out both;
-  -webkit-animation: slideUp 500ms 1s ease-in-out both;
-  animation: slideUp 500ms 1s ease-in-out both;
-
-}
-
-.animation_desserts2 {
-  position: relative;
-  background-color: var(--white);
-  height: 70px;
-  padding: 0 0 15px 0;
-  margin: 1rem 0 12px 0;
-  cursor: pointer;
-  overflow: hidden;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  border-radius: 1.5rem;
-  -webkit-box-shadow: 3px 3px 10px #dedada;
-  box-shadow: 3px 3px 10px #dedada;
-  grid-column-start: 2;
-  opacity: 0;
-  -webkit-animation: slideUp 500ms 0.6s ease-in-out both;
-  animation: slideUp 500ms 0.6s ease-in-out both;
-  -webkit-animation: slideUp 500ms 1.1s ease-in-out both;
-  animation: slideUp 500ms 1.1s ease-in-out both;
-
-}
-
-.animation_desserts3 {
-  position: relative;
-  background-color: var(--white);
-  height: 70px;
-  padding: 0 0 15px 0;
-  margin: 1rem 0 12px 0;
-  cursor: pointer;
-  overflow: hidden;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  border-radius: 1.5rem;
-  -webkit-box-shadow: 3px 3px 10px #dedada;
-  box-shadow: 3px 3px 10px #dedada;
-  grid-column-start: 2;
-  opacity: 0;
-  -webkit-animation: slideUp 500ms 0.6s ease-in-out both;
-  animation: slideUp 500ms 0.6s ease-in-out both;
-  -webkit-animation: slideUp 500ms 1.2s ease-in-out both;
-  animation: slideUp 500ms 1.2s ease-in-out both;
-
-}
-
-.animation_desserts4 {
-  position: relative;
-  background-color: var(--white);
-  height: 70px;
-  padding: 0 0 15px 0;
-  margin: 1rem 0 12px 0;
-  cursor: pointer;
-  overflow: hidden;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  border-radius: 1.5rem;
-  -webkit-box-shadow: 3px 3px 10px #dedada;
-  box-shadow: 3px 3px 10px #dedada;
-  grid-column-start: 2;
-  opacity: 0;
-  -webkit-animation: slideUp 500ms 0.6s ease-in-out both;
-  animation: slideUp 500ms 0.6s ease-in-out both;
-  -webkit-animation: slideUp 500ms 1.3s ease-in-out both;
-  animation: slideUp 500ms 1.3s ease-in-out both;
 
 }
 
@@ -774,17 +546,40 @@ menu:hover {
 
 .check {
   display: flex;
-  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 0%;
   background-color: var(--green);
-  border-radius: 0 12px 12px 0;
-  color: var(--white);
-  width: 0;
-  right: 0;
-  overflow: hidden;
-  transition: width 400ms ease-in-out;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
+
+.fa-check-circle {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  opacity: 1;
+}
+
+.check, .fa-check-circle {
+  opacity: 0;
+  color: var(--white);
+  font-size: small;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
+.check:hover {
+  width: 15%;
+}
 
 /*footer*/
 
