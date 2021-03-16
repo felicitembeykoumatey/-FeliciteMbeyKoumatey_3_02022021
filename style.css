@@ -11,37 +11,28 @@
   --heart: #C968DB;
 }
 
-@keyframes upward {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes load-container {
+@keyframes loading {
   0% {
     opacity: 1;
-    z-index: 2;
-  }
-
-  70% {
-    opacity: 1;
-  }
-
-  99% {
-    z-index: 2;
   }
 
   100% {
     opacity: 0;
-    z-index: -10;
+    z-index: 1;
   }
 }
+
+@-webkit-keyframes loading {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: 1;
+  }
+}
+
 
 @keyframes spin {
   0% {
@@ -67,6 +58,34 @@
 
 }
 
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 /* body */
 
 html,
@@ -90,6 +109,7 @@ main {
   width: auto;
   flex-direction: column;
   flex-wrap: wrap;
+  z-index: -1;
 }
 
 /*research*/
@@ -135,16 +155,6 @@ li:before {
 
 /*restaurants*/
 
-main figure {
-  margin: 10px 10px 10px 15px;
-  width: 300px;
-  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2);
-  transition: 200ms ease-out;
-  align-self: center;
-  border-radius: 20px;
-  background-color: var(--white);
-}
-
 main figure a {
   color: var(--black);
   text-decoration: none;
@@ -152,14 +162,8 @@ main figure a {
 
 main figure img {
   object-fit: cover;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  height: 175px;
-  width: 100%;
-}
-
-article {
-  margin: 10px 10px 12px 12px;
+  width: auto;
+  margin: -15px -7px 10px -40px;
 }
 
 main figure div {
@@ -175,6 +179,13 @@ main figure p {
 
 main figure h3 {
   font-size: medium;
+}
+
+hr {
+  width: 2.5rem;
+  border-top: 3px solid var(--green);
+  margin: -14px 0 0 0;
+
 }
 
 /*footer*/
@@ -202,16 +213,29 @@ ul {
   margin: 10px 10px 15px -43px;
 }
 
+/*4 menus*/
+
+h2 {
+  margin-bottom: 20px;
+  font-size: medium;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
 /*loader*/
 .loading_page {
-  position: absolute;
   height: 500px;
   line-height: 500px;
+  animation: loading 3s;
+  transition: 3s;
+  text-align: center;
+  z-index: 3;
 }
+
 
 .loader {
   display: flex;
-  position: relative;
+  position: absolute;
   border: 16px solid var(--purple);
   border-top: 16px solid var(--pink);
   border-right: 16px solid var(--gray);
@@ -219,10 +243,11 @@ ul {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  align-items: center;
+  justify-content: center;
   -webkit-box-pack: center;
-  animation: spin 2s linear infinite;
-  -webkit-animation: spin 2s linear infinite;
+  animation: spin 3s linear infinite;
+  -webkit-animation: spin 3s linear infinite;
+  z-index: 2;
 }
 
 .title_loader {
@@ -235,7 +260,7 @@ ul {
   content: "";
   position: absolute;
   animation: spin 2s linear infinite;
-  -webkit-animation: spin 2s linear infinite;
+  -webkit-animation: spin 3s linear infinite;
 }
 
 
@@ -271,8 +296,6 @@ ul {
 .explorer {
   display: flex;
   margin: 24px 15px 15px 12px;
-  padding: 12px 4px 14px 13px;
-  width: 75%;
   border: 0;
   font-weight: bold;
   font-size: medium;
@@ -280,10 +303,16 @@ ul {
   color: var(--white);
   background-image: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, 0.9));
   cursor: pointer;
-  transition-duration: 0.50s;
-  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 1s;
   text-decoration: none;
   justify-content: center;
+}
+
+.explorer:hover {
+  transform: scale(1.15);
+  box-shadow: 12px 12px 2px 1px rgb(1 2 43 / 19%);
 }
 
 .research {
@@ -295,6 +324,7 @@ ul {
 .title {
   font-family: "Shrikhand";
 }
+
 
 /*Fonctionnement*/
 
@@ -357,6 +387,11 @@ ul {
   width: auto;
 }
 
+.heat-empty {
+  position: relative;
+  z-index: 1;
+}
+
 .heart-empty:hover {
   display: none;
 }
@@ -368,6 +403,9 @@ ul {
 .heart-empty:hover~.heart-full {
   display: block;
   color: var(--heart);
+  cursor: pointer;
+  transform: scale(1);
+  opacity: 1;
 }
 
 .fa-list-ul,
@@ -393,34 +431,13 @@ ul {
 
 
 /*4 menus*/
-.navigator_header {
-  display: flex;
-  padding: 10px 0 12px 10px;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.animation_menu {
-  display: flex;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 280px;
-  padding: 30px 40px 20px 20px;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--white);
-  border-top-left-radius: 45px;
-  border-top-right-radius: 45px;
-}
-
-
 .order-dishes {
   display: flex;
   text-decoration: none;
   justify-content: center;
   margin: 24px 15px 15px 6px;
   padding: 12px 4px 14px 13px;
+  width: 85%;
   border: 0;
   font-weight: bold;
   font-size: medium;
@@ -428,53 +445,140 @@ ul {
   color: var(--white);
   background-image: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9));
   cursor: pointer;
-  transition-duration: .50s;
-  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
-  width: 85%;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 1s;
+
 }
 
-.menu {
-  background-image: url(images/restaurants/la_palette_du_goût.jpg);
-  flex-direction: column;
+.order-dishes:hover {
+  transform: scale(1.15);
+  box-shadow: 12px 12px 2px 1px rgb(1 2 43 / 19%);
+}
+
+.main_dishe {
+  width: auto;
+}
+
+menu:hover {
+  -webkit-transform: translate(0px);
+  transform: translate(0px);
+}
+
+.menu:hover {
+  -webkit-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+}
+
+.starter_dishe {
+  -webkit-animation: slideUp 500ms ease-in-out both;
+  animation: slideUp 500ms ease-in-out both;
+}
+
+.menu_title {
+  margin: 0px;
+  font-family: "Shrikhand", cursive;
+  font-weight: 900;
+  font-size: large;
+}
+
+.meal {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0 10px;
   width: 100%;
 }
 
-.image_menu {
+.meal h3:nth-child(1) {
+  margin: 15px 0 5px 15px;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.meal p:nth-child(2) {
+  font-size: small;
+}
+
+.meal b:nth-child(3) {
+  display: flex;
+  justify-content: flex-end;
+  margin: -35px 12px 0px 302px;
+  font-weight: bold;
+}
+
+.animation_starter,
+.animation_dishe,
+.animation_desserts {
   position: relative;
-  object-fit: cover;
-  height: 300px;
+  background-color: var(--white);
+  height: 70px;
+  padding: 0 0 15px 0;
+  margin: 1rem 0 12px 0;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 3px 3px 10px #dedada;
+  box-shadow: 3px 3px 10px #dedada;
+  grid-column-start: 2;
+  opacity: 0;
+  -webkit-animation: slideUp 500ms 0.6s ease-in-out both;
+  animation: slideUp 500ms 0.6s ease-in-out both;
+  -webkit-animation: slideUp 500ms 0.2s ease-in-out both;
+  animation: slideUp 500ms 0.2s ease-in-out both;
+}
+
+.desserts {
+  -webkit-animation: slideUp 500ms 0.9s ease-in-out both;
+  animation: slideUp 500ms 0.9s ease-in-out both;
 
 }
 
 .price {
-  display: flex;
-  padding-left: 15px;
-  justify-content: flex-end;
-  align-items: flex-end;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: bold;
+  padding-right: 10px;
 }
 
-.animation_green {
+.check {
   display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 0%;
   background-color: var(--green);
-  margin: 10px 10px 10px 10px;
-  width: auto;
-  align-items: center;
-  justify-content: center;
-  transition-duration: 0.5s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-.whrap_icon {
-  display: flex;
+
+.fa-check-circle {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  opacity: 1;
+}
+
+.check, .fa-check-circle {
+  opacity: 0;
+  color: var(--white);
+  font-size: small;
+  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
-  transition-duration: 0.5s;
-  justify-content: center;
-  height: 30px;
-  width: auto;
-  background-color: var(--white);
-  align-items: center;
-  border-radius: 100px;
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
+.check:hover {
+  width: 15%;
 }
 
 /*footer*/
@@ -513,7 +617,11 @@ ul {
 }
 
 /*landscape*/
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+  .explorer {
+    margin: 24px 15px 15px 12px;
+  }
+}
 
 /*tablets*/
 @media (min-width: 768px) {
@@ -525,31 +633,45 @@ ul {
   }
 
 
-.function_card {
-  flex-direction: row;
-  justify-content: space-around;
-}
+  .function_card {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
-.choice {
-  width: 210px;
-  height: 60px;
-  font-size: medium;
-  font-weight: bold;
-}
+  .choice {
+    width: 210px;
+    height: 60px;
+    font-size: medium;
+    font-weight: bold;
+  }
 
-.all_cards {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  .all_cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
-}
+  }
+
+  .explorer {
+    margin: 24px 15px 15px 12px;
+  }
 
 }
 
 
 
 /*desktops*/
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+  .explorer {
+    margin: 24px 15px 15px 12px;
+  }
+
+}
 
 /*large desktops*/
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+  .explorer {
+    margin: 24px 15px 15px 12px;
+  }
+
+}
