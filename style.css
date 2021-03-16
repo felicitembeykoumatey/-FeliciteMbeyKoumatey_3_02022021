@@ -126,9 +126,10 @@ form.search_form {
 
 /*function*/
 
-p {
+.menu_detail {
+  font-size: small;
   font-weight: 300;
-  margin: 10px;
+  margin: 10px 12px 15px 10px;
 }
 
 ol {
@@ -172,20 +173,15 @@ main figure div {
   justify-content: space-between;
 }
 
-main figure h3,
-main figure p {
-  margin: 0;
-}
-
-main figure h3 {
-  font-size: medium;
-}
-
 hr {
   width: 2.5rem;
   border-top: 3px solid var(--green);
   margin: -14px 0 0 0;
 
+}
+
+section li:before {
+  display: none;
 }
 
 /*footer*/
@@ -334,7 +330,8 @@ h2 {
   background-color: var(--white);
 }
 
-.function_title {
+.function_title,
+.restaurants_title {
   margin: 0;
   font-size: medium;
   font-weight: bold;
@@ -368,8 +365,8 @@ h2 {
 .notify-badge {
   display: flex;
   position: absolute;
-  margin-left: 215px;
-  margin-bottom: 205px;
+  margin-left: 200px;
+  margin-bottom: 200px;
   margin-top: 10px;
   height: 30px;
   width: 80px;
@@ -456,108 +453,15 @@ h2 {
   box-shadow: 12px 12px 2px 1px rgb(1 2 43 / 19%);
 }
 
-.main_dishe {
-  width: auto;
-}
-
-menu:hover {
-  -webkit-transform: translate(0px);
-  transform: translate(0px);
-}
-
-.menu:hover {
-  -webkit-transform: rotate(-360deg);
-  transform: rotate(-360deg);
-}
-
-.starter_dishe {
-  -webkit-animation: slideUp 500ms ease-in-out both;
-  animation: slideUp 500ms ease-in-out both;
-}
-
-.menu_title {
-  margin: 0px;
-  font-family: "Shrikhand", cursive;
-  font-weight: 900;
-  font-size: large;
-}
-
-.meal {
-  display: flex;
-  flex-wrap: nowrap;
-  margin: 0;
-  padding: 0 10px;
-  width: 100%;
-}
-
-.meal h3:nth-child(1) {
-  margin: 15px 0 5px 15px;
-  font-weight: bold;
-  font-size: medium;
-}
-
-.meal p:nth-child(2) {
-  font-size: small;
-}
-
-.meal b:nth-child(3) {
-  display: flex;
-  justify-content: flex-end;
-  margin: -35px 12px 0px 302px;
-  font-weight: bold;
-}
-
-.animation_starter,
-.animation_dishe,
-.animation_desserts {
-  position: relative;
-  background-color: var(--white);
-  height: 70px;
-  padding: 0 0 15px 0;
-  margin: 1rem 0 12px 0;
-  cursor: pointer;
-  overflow: hidden;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  border-radius: 1.5rem;
-  -webkit-box-shadow: 3px 3px 10px #dedada;
-  box-shadow: 3px 3px 10px #dedada;
-  grid-column-start: 2;
-  opacity: 0;
-  -webkit-animation: slideUp 500ms 0.6s ease-in-out both;
-  animation: slideUp 500ms 0.6s ease-in-out both;
-  -webkit-animation: slideUp 500ms 0.2s ease-in-out both;
-  animation: slideUp 500ms 0.2s ease-in-out both;
-}
-
-.desserts {
-  -webkit-animation: slideUp 500ms 0.9s ease-in-out both;
-  animation: slideUp 500ms 0.9s ease-in-out both;
-
-}
 
 .price {
+  display: flex;
+  justify-content: flex-end;
+  margin: -35px 15px 15px 0;
+  padding-right: 10px;
   font-size: 14px;
   font-weight: bold;
-  padding-right: 10px;
-}
 
-.check {
-  display: flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 0%;
-  background-color: var(--green);
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
 
@@ -567,7 +471,8 @@ menu:hover {
   opacity: 1;
 }
 
-.check, .fa-check-circle {
+.check,
+.fa-check-circle {
   opacity: 0;
   color: var(--white);
   font-size: small;
@@ -616,6 +521,46 @@ menu:hover {
   margin: -25px 10px 8px -8px;
 }
 
+.animation_meal {
+  position: relative;
+  z-index: 99;
+  margin-top: -40px;
+  height: 1400px;
+  background-color: var(--gray);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+/*4 menus*/
+.menu {
+  position: relative;
+  background-color: var(--white);
+  height: 70px;
+  padding: 0 0 15px 0;
+  margin: 1rem 0 12px 0;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 3px 3px 10px #dedada;
+  box-shadow: 3px 3px 10px #dedada;
+  grid-column-start: 2;
+  opacity: 0;
+  -webkit-animation: slideUp 500ms 0.6s ease-in-out both;
+  animation: slideUp 500ms 0.6s ease-in-out both;
+  -webkit-animation: slideUp 500ms 0.2s ease-in-out both;
+  animation: slideUp 500ms 0.2s ease-in-out both;
+}
+
+.title {
+  margin: 6px 0 5px 12px;
+  font-weight: bold;
+  font-size: medium;
+}
+
 /*landscape*/
 @media (min-width: 576px) {
   .explorer {
@@ -658,8 +603,6 @@ menu:hover {
 
 }
 
-
-
 /*desktops*/
 @media (min-width: 992px) {
   .explorer {
@@ -672,6 +615,12 @@ menu:hover {
 @media (min-width: 1200px) {
   .explorer {
     margin: 24px 15px 15px 12px;
+  }
+
+  .animation_menu {
+    display: flex;
+    justify-content: space-around;
+
   }
 
 }
