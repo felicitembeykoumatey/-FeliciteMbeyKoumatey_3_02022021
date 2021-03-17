@@ -89,7 +89,8 @@
 /* body */
 
 html,
-body {
+body,
+main{
   margin: 0;
   color: var(--black);
   font-family: "Roboto", sans-serif;
@@ -104,12 +105,17 @@ header {
 }
 
 /* main */
+article {
+  background-color: var(--white);
+}
 
-main {
-  width: auto;
+.main_restaurant {
   flex-direction: column;
   flex-wrap: wrap;
   z-index: -1;
+  padding-bottom: 50px;
+  width: auto;
+  background-color: var(--gray);
 }
 
 /*research*/
@@ -156,22 +162,15 @@ li:before {
 
 /*restaurants*/
 
-main figure a {
+figure a {
   color: var(--black);
   text-decoration: none;
 }
-
-main figure img {
-  object-fit: cover;
-  width: auto;
-  margin: -15px -7px 10px -40px;
-}
-
-main figure div {
+figure{
   display: flex;
-  padding: 15px;
-  justify-content: space-between;
+  margin: 10px 10px 12px 12px;
 }
+
 
 hr {
   width: 2.5rem;
@@ -180,7 +179,7 @@ hr {
 
 }
 
-section li:before {
+section .animation:before {
   display: none;
 }
 
@@ -348,7 +347,7 @@ h2 {
   display: flex;
   margin: 0 10px 15px 30px;
   border-radius: 20px;
-  width: 90%;
+  width: 85%;
   align-items: center;
   font-weight: bold;
   background-color: var(--gray_dark);
@@ -377,6 +376,13 @@ h2 {
   color: var(--green_dark);
   font-size: 13px;
   font-weight: bold;
+}
+
+.img_card {
+  width: auto;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .restaurants {
@@ -563,64 +569,19 @@ h2 {
 
 /*landscape*/
 @media (min-width: 576px) {
-  .explorer {
-    margin: 24px 15px 15px 12px;
-  }
 }
 
 /*tablets*/
 @media (min-width: 768px) {
-  figure {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-
-  .function_card {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .choice {
-    width: 210px;
-    height: 60px;
-    font-size: medium;
-    font-weight: bold;
-  }
-
-  .all_cards {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-  }
-
-  .explorer {
-    margin: 24px 15px 15px 12px;
-  }
 
 }
 
 /*desktops*/
 @media (min-width: 992px) {
-  .explorer {
-    margin: 24px 15px 15px 12px;
-  }
 
 }
 
 /*large desktops*/
 @media (min-width: 1200px) {
-  .explorer {
-    margin: 24px 15px 15px 12px;
-  }
-
-  .animation_menu {
-    display: flex;
-    justify-content: space-around;
-
-  }
 
 }
