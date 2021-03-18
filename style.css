@@ -90,7 +90,7 @@
 
 html,
 body,
-main{
+main {
   margin: 0;
   color: var(--black);
   font-family: "Roboto", sans-serif;
@@ -105,17 +105,20 @@ header {
 }
 
 /* main */
-article {
+
+figure article {
+  display: flex;
+  justify-content: space-between;
+  margin: -31px 12px 15px 0px;
+  padding: 15px;
+  height: 68px;
+  width: 260px;
   background-color: var(--white);
+  border-radius: 25px 25px;
 }
 
-.main_restaurant {
-  flex-direction: column;
-  flex-wrap: wrap;
-  z-index: -1;
-  padding-bottom: 50px;
-  width: auto;
-  background-color: var(--gray);
+figure p {
+  margin: 50px 12px 10px -260px;
 }
 
 /*research*/
@@ -161,12 +164,19 @@ li:before {
 }
 
 /*restaurants*/
+.fa,
+.far,
+.fas {
+  font-family: "Font Awesome 5 Free";
+  margin: 10px 10px 15px 0;
+}
 
 figure a {
   color: var(--black);
   text-decoration: none;
 }
-figure{
+
+figure {
   display: flex;
   margin: 10px 10px 12px 12px;
 }
@@ -269,6 +279,14 @@ h2 {
 }
 
 /*research*/
+.main_restaurant {
+  flex-direction: column;
+  flex-wrap: wrap;
+  z-index: -1;
+  padding-bottom: 50px;
+  width: auto;
+  background-color: var(--gray);
+}
 
 .research_title {
   display: flex;
@@ -331,9 +349,9 @@ h2 {
 
 .function_title,
 .restaurants_title {
-  margin: 0;
+  margin: 10px 0 0 15px;
   font-size: medium;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .function_card {
@@ -366,7 +384,7 @@ h2 {
   position: absolute;
   margin-left: 200px;
   margin-bottom: 200px;
-  margin-top: 10px;
+  margin-top: 30px;
   height: 30px;
   width: 80px;
   justify-content: center;
@@ -379,7 +397,18 @@ h2 {
 }
 
 .img_card {
-  width: auto;
+  margin: 10px 2px 10px 0;
+  height: 195px;
+  width: 290px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.img_card1 {
+  margin: 10px 2px 10px 0px;
+  height: 175px;
+  width: 290px;
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -568,20 +597,13 @@ h2 {
 }
 
 /*landscape*/
-@media (min-width: 576px) {
-}
+@media (min-width: 576px) {}
 
 /*tablets*/
-@media (min-width: 768px) {
-
-}
+@media (min-width: 768px) {}
 
 /*desktops*/
-@media (min-width: 992px) {
-
-}
+@media (min-width: 992px) {}
 
 /*large desktops*/
-@media (min-width: 1200px) {
-
-}
+@media (min-width: 1200px) {}
