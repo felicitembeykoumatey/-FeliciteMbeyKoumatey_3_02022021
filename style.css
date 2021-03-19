@@ -94,14 +94,17 @@ body {
   color: var(--black);
   font-family: "Roboto", sans-serif;
 }
-main{
+
+main {
   min-width: 375px;
 }
+
 /* header */
 header {
   position: relative;
-  box-shadow: 0 5px 5px;
+  box-shadow: 2px 3px 7px;
   z-index: auto;
+  width: 96%;
 }
 
 /* main */
@@ -333,10 +336,11 @@ h2 {
 }
 
 .research {
-    align-items: center;
-    padding: 10px 0 10px 36px;
-    width: auto;
+  align-items: center;
+  padding: 10px 0 10px 36px;
+  width: auto;
 }
+
 .title {
   font-family: "Shrikhand";
 }
@@ -471,8 +475,80 @@ h2 {
   color: var(--purple);
 }
 
+/*footer*/
+
+.footer_title {
+  margin: 10px 10px 10px 25px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.fa-utensils:before,
+.fa-hands-helping:before {
+  margin: 10px 10px 10px 15px;
+}
+
+.footer_list,
+.notice,
+.messenger {
+  text-decoration: none;
+}
+
+
+.notice {
+  display: flex;
+  padding: 10px 12px 10px 12px;
+}
+
+.messenger {
+  display: flex;
+  margin: 0px 12px 10px 360px;
+}
+
+.contact {
+  font-weight: bold;
+  font-style: normal;
+  padding: 0 0 0 5px;
+  margin: 5px 10px 8px -310px;
+}
+
+.animation_meal {
+  position: relative;
+  z-index: 99;
+  margin-top: -40px;
+  height: 1400px;
+  background-color: var(--gray);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
 
 /*4 menus*/
+.fa-arrow-left{
+  color:var(--black);
+}
+.menu {
+  position: relative;
+  background-color: var(--white);
+  height: 70px;
+  padding: 0 0 15px 0;
+  margin: 1rem 0 12px 0;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 3px 3px 10px #dedada;
+  box-shadow: 3px 3px 10px #dedada;
+  grid-column-start: 2;
+  opacity: 0;
+  -webkit-animation: slideUp 500ms 0.6s ease-in-out both;
+  animation: slideUp 500ms 0.6s ease-in-out both;
+  -webkit-animation: slideUp 500ms 0.2s ease-in-out both;
+  animation: slideUp 500ms 0.2s ease-in-out both;
+}
+
 .order-dishes {
   display: flex;
   text-decoration: none;
@@ -531,76 +607,6 @@ h2 {
   width: 15%;
 }
 
-/*footer*/
-
-.footer_title {
-  margin: 10px 10px 10px 25px;
-  font-weight: bold;
-  font-size: large;
-}
-
-.fa-utensils:before,
-.fa-hands-helping:before {
-  margin: 10px 10px 10px 15px;
-}
-
-.footer_list,
-.notice,
-.messenger {
-  text-decoration: none;
-}
-
-
-.notice {
-  display: flex;
-  padding: 10px 12px 10px 12px;
-}
-
-.messenger {
-  display: flex;
-  margin: 0px 12px 10px 360px;
-}
-
-.contact {
-  font-weight: bold;
-  font-style: normal;
-  padding: 0 0 0 5px;
-  margin: 5px 10px 8px -310px;
-}
-
-.animation_meal {
-  position: relative;
-  z-index: 99;
-  margin-top: -40px;
-  height: 1400px;
-  background-color: var(--gray);
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-}
-
-/*4 menus*/
-.menu {
-  position: relative;
-  background-color: var(--white);
-  height: 70px;
-  padding: 0 0 15px 0;
-  margin: 1rem 0 12px 0;
-  cursor: pointer;
-  overflow: hidden;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  border-radius: 1.5rem;
-  -webkit-box-shadow: 3px 3px 10px #dedada;
-  box-shadow: 3px 3px 10px #dedada;
-  grid-column-start: 2;
-  opacity: 0;
-  -webkit-animation: slideUp 500ms 0.6s ease-in-out both;
-  animation: slideUp 500ms 0.6s ease-in-out both;
-  -webkit-animation: slideUp 500ms 0.2s ease-in-out both;
-  animation: slideUp 500ms 0.2s ease-in-out both;
-}
 
 .title {
   margin: 6px 0 5px 12px;
