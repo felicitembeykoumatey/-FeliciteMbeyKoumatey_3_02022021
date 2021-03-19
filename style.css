@@ -91,7 +91,7 @@
 html,
 body,
 main {
-  min-width: auto;
+  min-width: 375px;
   color: var(--black);
   font-family: "Roboto", sans-serif;
 }
@@ -616,6 +616,13 @@ h2 {
 
 /*tablets*/
 @media screen and (min-width: 768px) {
+    .function_card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding-left: 25px;
+  }
 
   .contact {
     margin: 5px 10px 8px 5px;
@@ -670,10 +677,13 @@ h2 {
 
 /*desktop*/
 @media screen and (min-width: 2560px) {
-  .footer_title {
-    margin: 10px 10px 10px 1235px;
-  }
-  .contact {
-    margin: 0 10px 8px 890px;
-  }
+
+
+.footer_title {
+  margin: 10px 10px 10px 1235px;
+}
+
+.contact {
+  margin: 0 10px 8px 890px;
+}
 }
