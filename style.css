@@ -299,7 +299,7 @@ h2 {
   display: flex;
   margin: 12px 12px 10px 6px;
   padding: 0 4px 12px 0;
-  width: 100%;
+  width: 85%;
   font-weight: bold;
 }
 
@@ -366,8 +366,8 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0px 15px 20px 0;
   padding-left: 0;
+  width: 85%;
 }
 
 .choice {
@@ -450,7 +450,7 @@ h2 {
   display: block;
   color: var(--heart);
   cursor: pointer;
-  transform: scale(1);
+ transform: scale(1);
   opacity: 1;
 }
 
@@ -639,9 +639,7 @@ h2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 8px 10px 10px 15px;
-    margin: 14px 15px 20px 59px;
+    justify-content: center;
     width: auto;
   }
 
