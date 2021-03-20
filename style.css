@@ -104,7 +104,8 @@ header {
   position: relative;
   box-shadow: 2px 3px 7px;
   z-index: auto;
-  width: 96%;
+  margin: 0 0 0px 2px;
+  width: 100%;
 }
 
 /* main */
@@ -170,7 +171,6 @@ li:before {
 }
 
 /*restaurants*/
-.fa,
 .far,
 .fas {
   font-family: "Font Awesome 5 Free";
@@ -225,8 +225,6 @@ ul {
   flex-direction: column;
 }
 
-/*4 menus*/
-
 h2 {
   margin-bottom: 20px;
   font-size: medium;
@@ -279,10 +277,17 @@ h2 {
 /*logo*/
 .logo_ohmyfood {
   display: flex;
-  padding: 10px 15px 15px 90px;
+  margin: 10px 10px 10px 0;
+  padding: 0px 15px 15px 65px;
   width: auto;
   font-size: small;
   font-family: "Shrikhand";
+}
+
+.navigator_header {
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--white);
 }
 
 /*research*/
@@ -337,7 +342,7 @@ h2 {
 
 .research {
   align-items: center;
-  padding: 10px 0 10px 36px;
+  padding: 10px 0 10px 20px;
   width: auto;
 }
 
@@ -450,7 +455,7 @@ h2 {
   display: block;
   color: var(--heart);
   cursor: pointer;
- transform: scale(1);
+  transform: scale(1);
   opacity: 1;
 }
 
@@ -523,15 +528,40 @@ h2 {
 }
 
 /*4 menus*/
-.fa-arrow-left{
-  color:var(--black);
+.image_menu {
+  position: relative;
+  height: 190px;
+  width: 400px;
+  object-fit: cover;
+  margin: -12px 10px 15px -23px;
 }
+
+.menu_title {
+  margin: 10px 15px 10px 15px;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.fa-arrow-left {
+  color: var(--black);
+}
+
+.menu_main {
+  flex-direction: column;
+}
+
+.animation_menu {
+  padding: 22px 40px 20px 20px;
+  justify-content: space-between;
+  background-color: var(--gray_dark);
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+}
+
 .menu {
+  display: flex;
   position: relative;
   background-color: var(--white);
-  height: 70px;
-  padding: 0 0 15px 0;
-  margin: 1rem 0 12px 0;
   cursor: pointer;
   overflow: hidden;
   -webkit-box-align: center;
@@ -541,12 +571,20 @@ h2 {
   border-radius: 1.5rem;
   -webkit-box-shadow: 3px 3px 10px #dedada;
   box-shadow: 3px 3px 10px #dedada;
-  grid-column-start: 2;
   opacity: 0;
   -webkit-animation: slideUp 500ms 0.6s ease-in-out both;
   animation: slideUp 500ms 0.6s ease-in-out both;
   -webkit-animation: slideUp 500ms 0.2s ease-in-out both;
   animation: slideUp 500ms 0.2s ease-in-out both;
+}
+
+.fa-check-circle {
+  color: var(--white);
+  background-color: var(--green);
+  border-radius: 0 12px 12px 0;
+  justify-content: center;
+  align-items: center;
+  transition: width 400ms ease-in-out;
 }
 
 .order-dishes {
@@ -574,7 +612,6 @@ h2 {
   box-shadow: 12px 12px 2px 1px rgb(1 2 43 / 19%);
 }
 
-
 .price {
   display: flex;
   justify-content: flex-end;
@@ -585,33 +622,14 @@ h2 {
 
 }
 
-
-.fa-check-circle {
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
-  opacity: 1;
-}
-
-.check,
-.fa-check-circle {
-  opacity: 0;
-  color: var(--white);
-  font-size: small;
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-  -webkit-transition: .8s;
-  transition: .8s;
-}
-
-.check:hover {
-  width: 15%;
-}
-
-
 .title {
   margin: 6px 0 5px 12px;
   font-weight: bold;
   font-size: medium;
+}
+
+.starter_dishe {
+  margin: 10px 12px 12px 15px;
 }
 
 /*mobile*/
