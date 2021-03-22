@@ -95,8 +95,9 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+
 main {
-  min-width: 375px;
+  width: auto;
 }
 
 /* header */
@@ -107,6 +108,10 @@ header {
   margin: 0 0 0px 2px;
   width: 100%;
   background-color: var(--white);
+}
+
+nav {
+  width: auto;
 }
 
 /* main */
@@ -153,7 +158,6 @@ ol {
 }
 
 li {
-  margin-bottom: 10px;
   list-style-type: none;
   counter-increment: functions;
 }
@@ -223,6 +227,7 @@ footer li:before {
 ul {
   display: flex;
   flex-direction: column;
+  width: 60%;
 }
 
 h2 {
@@ -279,18 +284,22 @@ h2 {
   border: none;
   font-weight: bold;
   font-size: medium;
-  width: 100px;
+  width: 150px;
   height: 20px;
+  color: var(--black);
+  background: none;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  font-style: normal;
 }
 
 /*logo*/
 .logo_ohmyfood {
-  display: flex;
-  margin: auto;
-  padding: 10px;
-  text-align: center;
+  align-items: center;
   font-size: small;
   font-family: "Shrikhand";
+  margin: 10px 15px 15px 90px;
 }
 
 .navigator_header {
@@ -302,7 +311,7 @@ h2 {
 
 /*research*/
 .research_paragraph {
-  text-align: center;
+  font-size: 1.2rem;
 }
 
 .menu_detail {
@@ -325,18 +334,9 @@ h2 {
   display: flex;
   margin: auto;
   width: 85%;
+  font-family: "roboto", sans-serif;
+  font-size: 1.5rem;
   font-weight: bold;
-  text-align: center;
-}
-
-.search_form_text {
-  color: var(--black);
-  background: none;
-  border: none;
-  font-weight: bold;
-  font-size: medium;
-  text-align: center;
-  font-style: normal;
 }
 
 .explorer {
@@ -383,17 +383,16 @@ h2 {
 
 .function_title,
 .restaurants_title {
-  margin: 0 0 0 15px;
-  font-size: medium;
-  font-weight: 700;
   padding: 12px;
+  width: auto;
+  font-size: medium;
+  font-weight: bold;
+  margin: 13px 10px 15px 50px;
 }
 
 .function_card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-left: 0;
   width: 85%;
 }
 
@@ -456,8 +455,9 @@ h2 {
 }
 
 .restaurants {
-  padding: 12px 10px 10px 10px;
-  width: 60%;
+    padding: 10px 10px 20px 5px;
+    width: 70%;
+    margin: 25px 0 0px 16px;
 }
 
 .heat-empty {
@@ -510,21 +510,29 @@ h2 {
   font-size: large;
 }
 
-.fa-utensils:before,
-.fa-hands-helping:before {
-  margin: 10px 10px 10px 15px;
+.footer_logo {
+  display: flex;
+  margin: 10px;
+  width: 200px;
+  height: 25px;
+  filter: invert(100%);
+  font-size: small;
+  font-family: "Shrikhand";
+}
+
+.fa-utensils,
+.fa-hands-helping {
+  margin: 10px 0 0 0;
+}
+
+.notice {
+  text-decoration: none;
+  margin: 10px 0 0 0;
 }
 
 .footer_list,
-.notice,
 .messenger {
   text-decoration: none;
-}
-
-
-.notice {
-  display: flex;
-  padding: 10px 12px 10px 12px;
 }
 
 .messenger {
@@ -535,7 +543,6 @@ h2 {
 .contact {
   font-weight: bold;
   font-style: normal;
-  padding: 0 0 0 5px;
   margin: 5px 10px 8px -310px;
 }
 
@@ -667,23 +674,28 @@ h2 {
 
 /*tablets*/
 @media screen and (min-width: 768px) {
-  .research_title{
+  .logo_ohmyfood {
+    margin: 10px 15px 15px 278px;
+  }
+
+  .choice {
+    width: 45%;
+  }
+
+  .research_title {
     width: 70%;
   }
+
   .function_card {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: 0;
-    padding-left: 25px;
+    align-content: center;
+
   }
 
   .explorer {
-    margin: 18px 15px 15px 100px;
-  }
-
-  .contact {
-    margin: 5px 10px 8px 5px;
+    margin: 18px 15px 15px 150px;
+    width: 40%;
   }
 
   .cards {
@@ -694,52 +706,19 @@ h2 {
     width: auto;
   }
 
-  .footer_title {
-    margin: 10px 10px 10px 345px;
-  }
-
-  ul {
-    margin: 0 10px 15px 0;
-    align-items: center;
-  }
 }
 
 /*laptop*/
 @media screen and (min-width: 1024px) {
-  .footer_title {
-    margin: 10px 10px 10px 470px;
+  .logo_ohmyfood {
+    margin: 10px 15px 15px 405px;
   }
 
-  ul {
-    margin: 0 10px 15px 0;
-    align-items: center;
-  }
+  /*laptop large*/
+  @media screen and (min-width: 1440px) {
+    .logo_ohmyfood {
+      margin: 10px 15px 15px 600px;
+    }
 
-  .contact {
-    margin: 0 10px 8px 130px;
-  }
-}
-
-/*laptop large*/
-@media screen and (min-width: 1440px) {
-  .footer_title {
-    margin: 10px 10px 10px 670px;
-  }
-
-  .contact {
-    margin: 0 10px 8px 340px;
-  }
-}
-
-/*desktop*/
-@media screen and (min-width: 2560px) {
-
-
-  .footer_title {
-    margin: 10px 10px 10px 1235px;
-  }
-
-  .contact {
-    margin: 0 10px 8px 890px;
-  }
-}
+    /*desktop*/
+    @media screen and (min-width: 2560px) {}
