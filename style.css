@@ -239,6 +239,7 @@ h2 {
 
 /*loader*/
 .loading_page {
+  display: none;
   height: 500px;
   line-height: 500px;
   animation: loading 3s;
@@ -363,9 +364,8 @@ h2 {
 }
 
 .research {
-  align-items: center;
-  padding: 10px 0 10px 55px;
   width: 85%;
+  text-align: center;
 }
 
 .title {
@@ -455,9 +455,9 @@ h2 {
 }
 
 .restaurants {
-    padding: 10px 10px 20px 5px;
-    width: 70%;
-    margin: 25px 0 0px 16px;
+  padding: 10px 10px 20px 5px;
+  margin: 25px 0 0px 16px;
+  width: 100%;
 }
 
 .heat-empty {
