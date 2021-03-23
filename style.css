@@ -116,7 +116,7 @@ nav {
 
 /* main */
 figure {
-  margin: 10px 12px 15px 15px;
+  margin: 10px 12px 15px 55px;
 }
 
 figure article {
@@ -679,7 +679,7 @@ h2 {
   }
 
   .choice {
-    width: 45%;
+    width: 40%;
   }
 
   .research_title {
@@ -689,8 +689,8 @@ h2 {
   .function_card {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     align-content: center;
-
   }
 
   .explorer {
@@ -703,22 +703,63 @@ h2 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: auto;
+    width: 80%
   }
 
 }
 
 /*laptop*/
 @media screen and (min-width: 1024px) {
-  .logo_ohmyfood {
-    margin: 10px 15px 15px 405px;
-  }
-
+ .logo_ohmyfood {
+    display: flex;
+    padding: 10px;
+}
+}
   /*laptop large*/
   @media screen and (min-width: 1440px) {
     .logo_ohmyfood {
       margin: 10px 15px 15px 600px;
     }
 
+    .explorer {
+      width: 85%;
+    }
+
+    .choice {
+      width: 25%;
+    }
+
+    .function_title,
+    .restaurants_title {
+      margin: auto;
+
+    }
+
+    .research_title {
+      width: 25%;
+      font-size: 23px;
+      padding: 10px;
+    }
+
+
+
     /*desktop*/
-    @media screen and (min-width: 2560px) {}
+    @media screen and (min-width: 2560px) {
+      .research_title {
+        text-align: center;
+      }
+
+      .logo_ohmyfood {
+        margin: 0;
+        padding: 45px 12px 12px 30px;
+      }
+
+      .explorer:hover {
+        font-size: 30px;
+      }
+
+      .cards {
+        width: 70%;
+      }
+
+    }
