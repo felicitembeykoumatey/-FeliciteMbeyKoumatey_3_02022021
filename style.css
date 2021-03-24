@@ -616,7 +616,7 @@ h2 {
     "text1 ."
     "text2 price";
   flex-wrap: nowrap;
-  margin: 0;
+  margin: 5px;
   padding: 0 10px;
   width: 100%;
 }
