@@ -581,6 +581,7 @@ h2 {
 
 .animation_menu {
   padding: 22px 40px 20px 20px;
+  width: 100%;
   justify-content: space-between;
   background-color: var(--gray_dark);
   border-top-left-radius: 45px;
@@ -596,6 +597,7 @@ h2 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin: 10px;
   width: 100%;
   border-radius: 1.5rem;
   -webkit-box-shadow: 3px 3px 10px #dedada;
@@ -605,6 +607,38 @@ h2 {
   animation: slideUp 500ms 0.6s ease-in-out both;
   -webkit-animation: slideUp 500ms 0.2s ease-in-out both;
   animation: slideUp 500ms 0.2s ease-in-out both;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    "text1 ."
+    "text2 price";
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.menu h3:nth-child(1) {
+  grid-area: text1;
+  margin: 15px 0 5px 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.menu p:nth-child(2) {
+  grid-area: text2;
+  margin: 0 0 15px 0;
+}
+
+.menu b:nth-child(3) {
+  display: flex;
+  grid-area: price;
+  justify-content: flex-end;
+  margin: 0 15px 15px 0;
+  font-weight: bold;
 }
 
 .fa-check-circle {
@@ -710,56 +744,57 @@ h2 {
 
 /*laptop*/
 @media screen and (min-width: 1024px) {
- .logo_ohmyfood {
+  .logo_ohmyfood {
     display: flex;
     padding: 10px;
+  }
 }
-}
-  /*laptop large*/
-  @media screen and (min-width: 1440px) {
-    .logo_ohmyfood {
-      margin: 10px 15px 15px 600px;
-    }
 
-    .explorer {
-      width: 85%;
-    }
+/*laptop large*/
+@media screen and (min-width: 1440px) {
+  .logo_ohmyfood {
+    margin: 10px 15px 15px 600px;
+  }
 
-    .choice {
-      width: 25%;
-    }
+  .explorer {
+    width: 85%;
+  }
 
-    .function_title,
-    .restaurants_title {
-      margin: auto;
+  .choice {
+    width: 25%;
+  }
 
-    }
+  .function_title,
+  .restaurants_title {
+    margin: auto;
 
+  }
+
+  .research_title {
+    width: 25%;
+    font-size: 23px;
+    padding: 10px;
+  }
+
+
+
+  /*desktop*/
+  @media screen and (min-width: 2560px) {
     .research_title {
-      width: 25%;
-      font-size: 23px;
-      padding: 10px;
+      text-align: center;
     }
 
-
-
-    /*desktop*/
-    @media screen and (min-width: 2560px) {
-      .research_title {
-        text-align: center;
-      }
-
-      .logo_ohmyfood {
-        margin: 0;
-        padding: 45px 12px 12px 30px;
-      }
-
-      .explorer:hover {
-        font-size: 30px;
-      }
-
-      .cards {
-        width: 70%;
-      }
-
+    .logo_ohmyfood {
+      margin: 0;
+      padding: 45px 12px 12px 30px;
     }
+
+    .explorer:hover {
+      font-size: 30px;
+    }
+
+    .cards {
+      width: 70%;
+    }
+
+  }
