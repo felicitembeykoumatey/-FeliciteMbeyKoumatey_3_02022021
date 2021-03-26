@@ -60,7 +60,6 @@
 
 /* body */
 
-html,
 body {
   min-width: 375px;
   color: var(--black);
@@ -68,7 +67,7 @@ body {
 }
 
 main {
- min-width:375px;
+  min-width: 375px;
   animation: hide 3s;
 }
 
@@ -560,9 +559,10 @@ user agent stylesheet li {
 /*4 menus*/
 .image_menu {
   position: relative;
-  height: 190px;
-  width: 100%;
   object-fit: cover;
+  width: 375px;
+  height: 199px;
+  margin: -2px 12px 12px -45px;
 }
 
 .menu_title {
@@ -585,8 +585,8 @@ user agent stylesheet li {
 
 .animation_menu {
   position: absolute;
-  margin:-82px 15px 15px 20px;
-  width:80%;
+  margin: -82px 15px 15px 20px;
+  width: 80%;
   background-color: var(--gray_dark);
   border-top-left-radius: 45px;
   border-top-right-radius: 45px;
@@ -697,14 +697,9 @@ user agent stylesheet li {
   font-size: medium;
 }
 
-.starter_dishe {
-  margin: 10px 12px 12px 15px;
-}
-
-.footer_menu{
+.footer_menu {
   position: relative;
-
-  margin:10px 10px 12px 12px;
+  margin: 1390px 10px 12px -3px;
 }
 
 /*mobile*/
