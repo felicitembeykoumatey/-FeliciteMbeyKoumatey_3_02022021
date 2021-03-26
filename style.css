@@ -62,24 +62,30 @@
 
 html,
 body {
-  width: 375px;
+  min-width: 375px;
   color: var(--black);
   font-family: "Roboto", sans-serif;
 }
 
 main {
-  width: 375px;
+ min-width:375px;
   animation: hide 3s;
 }
 
 /* header */
+header {
+  margin: auto;
+
+}
 
 nav {
   width: auto;
 }
 
 /* main */
-
+figure {
+  margin: 10px 12px 15px 55px;
+}
 
 figure article {
   display: flex;
@@ -268,11 +274,9 @@ h3 {
 
 /*logo*/
 .logo_ohmyfood {
-  margin: 10px 15px 15px 90px;
-  width: 130px;
+  display: flex;
+  margin: 10px 10px 10px 50px;
   align-items: center;
-  font-size: small;
-  font-family: "Shrikhand";
 }
 
 .navigator_header {
@@ -320,7 +324,7 @@ header a {
 .research_title {
   display: flex;
   margin: auto;
-  width: 270px;
+  width: 85%;
   font-family: "roboto", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
@@ -401,7 +405,7 @@ li {
   counter-increment: functions;
 }
 
-li {
+user agent stylesheet li {
   display: list-item;
   text-align: -webkit-match-parent;
 }
@@ -556,8 +560,8 @@ li {
 /*4 menus*/
 .image_menu {
   position: relative;
-  height: 130px;
-  width: 286px;
+  height: 190px;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -565,6 +569,10 @@ li {
   margin: 10px 15px 10px 15px;
   font-weight: bold;
   font-size: medium;
+}
+
+.header_first {
+  display: flex;
 }
 
 .fa-arrow-left {
@@ -576,9 +584,9 @@ li {
 }
 
 .animation_menu {
-  padding: 22px 40px 20px 20px;
-  width: 100%;
-  justify-content: space-between;
+  position: absolute;
+  margin:-82px 15px 15px 20px;
+  width:80%;
   background-color: var(--gray_dark);
   border-top-left-radius: 45px;
   border-top-right-radius: 45px;
@@ -693,14 +701,17 @@ li {
   margin: 10px 12px 12px 15px;
 }
 
-.image_menu_enchante {
-  height: 100px;
-  width: 300px;
+.footer_menu{
+  position: relative;
+
+  margin:10px 10px 12px 12px;
 }
 
 /*mobile*/
 @media screen and (min-width:375px) {
-
+  figure {
+    margin: 10px 12px 15px 45px;
+  }
 
   .footer_title {
     margin: 10px 10px 10px 50px;
