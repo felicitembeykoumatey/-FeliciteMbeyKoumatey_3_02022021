@@ -62,13 +62,13 @@
 
 html,
 body {
-  min-width: 375px;
+  width: 375px;
   color: var(--black);
   font-family: "Roboto", sans-serif;
 }
 
 main {
-  width: auto;
+  width: 375px;
   animation: hide 3s;
 }
 
@@ -79,9 +79,7 @@ nav {
 }
 
 /* main */
-figure {
-  margin: 10px 12px 15px 55px;
-}
+
 
 figure article {
   display: flex;
@@ -127,8 +125,10 @@ li {
 }
 
 li:before {
-  margin: 15px 10px 15px -17px;
-  padding: 12px 20px 14px 15px;
+  margin: 9px 0px 15px 0;
+  padding: 5px 15px 13px 8px;
+  width: 3px;
+  height: 10px;
   vertical-align: top;
   background: var(--purple);
   border-radius: 30px 30px 30px 30px;
@@ -136,6 +136,7 @@ li:before {
   font-size: medium;
   color: var(--white);
   content: counter(functions);
+
 }
 
 /*restaurants*/
@@ -267,10 +268,11 @@ h3 {
 
 /*logo*/
 .logo_ohmyfood {
+  margin: 10px 15px 15px 90px;
+  width: 130px;
   align-items: center;
   font-size: small;
   font-family: "Shrikhand";
-  margin: 10px 15px 15px 90px;
 }
 
 .navigator_header {
@@ -318,7 +320,7 @@ header a {
 .research_title {
   display: flex;
   margin: auto;
-  width: 85%;
+  width: 270px;
   font-family: "roboto", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
@@ -356,9 +358,7 @@ header a {
   font-family: "Shrikhand";
 }
 
-
 /*Fonctionnement*/
-
 .function {
   flex-direction: row;
   align-items: center;
@@ -380,16 +380,30 @@ header a {
   width: 85%;
 }
 
+
 .choice {
   display: flex;
-  margin: 0 10px 15px 30px;
+  margin: 0 10px 15px 25px;
+  height: 45px;
+  width: 235px;
+  font-size: small;
   border-radius: 20px;
-  width: 85%;
   align-items: center;
   font-weight: bold;
   background-color: var(--gray_dark);
   box-shadow: 1px 3px 8px #d1d1d1;
   cursor: pointer;
+
+}
+
+li {
+  list-style-type: none;
+  counter-increment: functions;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
 }
 
 .choice:hover {
@@ -440,8 +454,7 @@ header a {
 
 .restaurants {
   padding: 10px 10px 20px 5px;
-  margin: 25px 0 0px 16px;
-  width: 100%;
+  width: 210px;
 }
 
 .heat-empty {
@@ -468,7 +481,7 @@ header a {
 .fa-list-ul,
 .fa-store,
 .fa-mobile-alt {
-  margin: 10px 10px 10px 10px;
+  margin: 5px;
 }
 
 .fa-store:hover {
@@ -680,11 +693,14 @@ header a {
   margin: 10px 12px 12px 15px;
 }
 
+.image_menu_enchante {
+  height: 100px;
+  width: 300px;
+}
+
 /*mobile*/
 @media screen and (min-width:375px) {
-  figure {
-    margin: 10px 12px 15px 45px;
-  }
+
 
   .footer_title {
     margin: 10px 10px 10px 50px;
