@@ -484,7 +484,7 @@ user agent stylesheet li {
 .fa-list-ul,
 .fa-store,
 .fa-mobile-alt {
-  margin: 5px;
+  margin: 15px;
 }
 
 .fa-store:hover {
@@ -767,11 +767,11 @@ user agent stylesheet li {
   }
 
   .explorer {
-    width: 60%;
+    margin: 12px 12px 15px 344px;
   }
 
   .research_title {
-    width: 45%;
+    width: 30%;
     padding: 10px;
   }
 }
@@ -781,21 +781,31 @@ user agent stylesheet li {
   .logo_ohmyfood {
     margin: 10px 15px 15px 600px;
   }
+
   .explorer {
     width: 20%;
     margin: 15px 15px 20px 530px;
   }
+
   .cards {
     flex-wrap: nowrap;
   }
+
   .choice {
     width: 25%;
   }
+
   .explorer {
     margin: 18px 15px 15px 570px;
     width: 20%;
   }
+
   .research_paragraph {
     width: 100%;
   }
+
+  .function_card {
+    padding: 20px 32px 75px 30px;
+  }
+
 }
