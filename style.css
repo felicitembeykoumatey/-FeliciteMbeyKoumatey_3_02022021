@@ -740,7 +740,7 @@ user agent stylesheet li {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 100%;
+    width: 97%;
     align-content: center;
   }
 
@@ -753,7 +753,7 @@ user agent stylesheet li {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 95%;
+    width: 100%;
     justify-content: center;
   }
 
@@ -774,10 +774,6 @@ user agent stylesheet li {
     width: 45%;
     padding: 10px;
   }
-
-  figure {
-    width: 20%;
-  }
 }
 
 /*laptop large*/
@@ -785,34 +781,21 @@ user agent stylesheet li {
   .logo_ohmyfood {
     margin: 10px 15px 15px 600px;
   }
-
   .explorer {
-    width: 85%;
-
+    width: 20%;
+    margin: 15px 15px 20px 530px;
   }
-
+  .cards {
+    flex-wrap: nowrap;
+  }
   .choice {
     width: 25%;
   }
+  .explorer {
+    margin: 18px 15px 15px 570px;
+    width: 20%;
   }
-
-  /*desktop*/
-  @media screen and (min-width: 2560px) {
-    .research_title {
-      text-align: center;
-    }
-
-    .logo_ohmyfood {
-      margin: 0;
-      padding: 45px 12px 12px 30px;
-    }
-
-    .explorer:hover {
-      font-size: 30px;
-    }
-
-    .cards {
-      width: 70%;
-    }
-
+  .research_paragraph {
+    width: 100%;
   }
+}
