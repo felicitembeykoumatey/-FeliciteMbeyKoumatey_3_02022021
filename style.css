@@ -59,7 +59,7 @@
 }
 
 /* body */
-
+html,
 body {
   min-width: 375px;
   color: var(--black);
@@ -301,6 +301,7 @@ header a {
 
 /*research*/
 .research_paragraph {
+  width: 100%;
   font-size: 1.2rem;
 }
 
@@ -323,7 +324,7 @@ header a {
 .research_title {
   display: flex;
   margin: auto;
-  width: 85%;
+  width: 100%;
   font-family: "roboto", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
@@ -332,7 +333,6 @@ header a {
 .explorer {
   display: flex;
   margin: 24px 15px 15px 50px;
-  padding: 0 20px 0 20px;
   border: 0;
   font-weight: bold;
   font-size: medium;
@@ -371,7 +371,7 @@ header a {
 .function_title,
 .restaurants_title {
   padding: 12px;
-  width: auto;
+  width: 30%;
   font-size: medium;
   font-weight: bold;
   margin: 13px 10px 15px 50px;
@@ -388,7 +388,7 @@ header a {
   display: flex;
   margin: 0 10px 15px 25px;
   height: 45px;
-  width: 235px;
+  width: 65%;
   font-size: small;
   border-radius: 20px;
   align-items: center;
@@ -415,9 +415,9 @@ user agent stylesheet li {
 }
 
 /*restaurants*/
-.all_cards {
-  width: auto;
 
+.all_cards {
+  width: 100%;
 }
 
 .notify-badge {
@@ -457,7 +457,7 @@ user agent stylesheet li {
 
 .restaurants {
   padding: 10px 10px 20px 5px;
-  width: 210px;
+  width: 70%;
 }
 
 .heat-empty {
@@ -706,6 +706,7 @@ user agent stylesheet li {
 @media screen and (min-width:375px) {
   figure {
     margin: 10px 12px 15px 45px;
+    width: 35%;
   }
 
   .footer_title {
@@ -717,6 +718,14 @@ user agent stylesheet li {
 @media screen and (min-width: 768px) {
   .logo_ohmyfood {
     margin: 10px 15px 15px 278px;
+  }
+
+  .figure {
+    margin: 0;
+  }
+
+  .research {
+    width: 100%;
   }
 
   .choice {
@@ -731,6 +740,7 @@ user agent stylesheet li {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    width: 100%;
     align-content: center;
   }
 
@@ -743,8 +753,8 @@ user agent stylesheet li {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 95%;
     justify-content: center;
-    width: 80%
   }
 
 }
@@ -754,6 +764,19 @@ user agent stylesheet li {
   .logo_ohmyfood {
     display: flex;
     padding: 10px;
+  }
+
+  .explorer {
+    width: 60%;
+  }
+
+  .research_title {
+    width: 45%;
+    padding: 10px;
+  }
+
+  figure {
+    width: 20%;
   }
 }
 
@@ -765,25 +788,13 @@ user agent stylesheet li {
 
   .explorer {
     width: 85%;
+
   }
 
   .choice {
     width: 25%;
   }
-
-  .function_title,
-  .restaurants_title {
-    margin: auto;
-
   }
-
-  .research_title {
-    width: 25%;
-    font-size: 23px;
-    padding: 10px;
-  }
-
-
 
   /*desktop*/
   @media screen and (min-width: 2560px) {
