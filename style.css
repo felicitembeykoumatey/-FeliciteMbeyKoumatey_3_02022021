@@ -11,24 +11,121 @@
   --heart: #C968DB;
 }
 
-@keyframes loading {
-  from {
-    display: flex;
+@charset "UTF-8";
+
+.loader {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient( var(--green_dark),  var(--pink));
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  -webkit-animation: load-wrapper 3s both;
+  animation: load-wrapper 3s both;
+  max-width: 1200px;
+}
+
+.lds-ripple {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  -webkit-animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+
+@-webkit-keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes load-wrapper {
+  0% {
+    opacity: 1;
+    z-index: 2;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  99% {
+    z-index: 2;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+@keyframes load-wrapper {
+  0% {
+    opacity: 1;
+    z-index: 2;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  99% {
+    z-index: 2;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -10;
   }
 }
 
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes hide {
-  from {
-    display: none;
-  }
-}
 
 @-webkit-keyframes slideUp {
   0% {
@@ -219,41 +316,14 @@ h3 {
   display: none;
   height: 500px;
   line-height: 500px;
-  animation: loading 3s;
+  animation: loader 3s;
   text-align: center;
   z-index: 3;
 }
 
 
-.loader {
-  display: flex;
-  position: absolute;
-  border: 16px solid var(--purple);
-  border-top: 16px solid var(--pink);
-  border-right: 16px solid var(--gray);
-  border-bottom: 16px solid var(--green);
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  justify-content: center;
-  -webkit-box-pack: center;
-  animation: spin 3s linear;
-  -webkit-animation: spin 3s linear;
-  z-index: 2;
-}
 
-.title_loader {
-  display: flex;
-  font-weight: bold;
-  color: var(--pink);
-}
 
-.loader:after {
-  content: "";
-  position: absolute;
-  animation: spin 2s linear infinite;
-  -webkit-animation: spin 3s linear infinite;
-}
 
 /*header*/
 .search_form_text {
@@ -699,11 +769,16 @@ user agent stylesheet li {
 
 .footer_menu {
   position: relative;
-  margin: 1390px 10px 12px -3px;
+  margin: 1253px 10px 12px -3px;
+  width: 658px;
 }
 
 /*mobile*/
 @media screen and (min-width:375px) {
+  .logo_ohmyfood {
+    margin: 10px 10px 10px 152px;
+  }
+
   figure {
     margin: 10px 12px 15px 45px;
     width: 35%;
@@ -712,12 +787,29 @@ user agent stylesheet li {
   .footer_title {
     margin: 10px 10px 10px 50px;
   }
+
+  .animation_menu {
+    position: absolute;
+    margin: -50px 15px 15px -6px;
+    width: 650px;
+  }
+
+  .image_menu {
+    width: 650px;
+    height: 249px;
+  }
 }
 
 /*tablets*/
 @media screen and (min-width: 768px) {
   .logo_ohmyfood {
-    margin: 10px 15px 15px 278px;
+    margin: 15px 15px 15px 72px;
+  }
+
+  .image_menu {
+    margin: 0 15px 15px -54px;
+    width: 416px;
+    height: 187px;
   }
 
   .figure {
@@ -757,10 +849,33 @@ user agent stylesheet li {
     justify-content: center;
   }
 
+  .footer_menu {
+    margin: 1327px 10px 12px -13px;
+    width: 704px;
+  }
+
+  .animation_menu {
+    width: 430px;
+  }
+
+  .order-dishes {
+    margin: 24px 15px 15px 109px;
+    padding: 12px 4px 14px 13px;
+    width: 43%;
+  }
+
+  body {
+    width: 768px;
+  }
+
 }
 
 /*laptop*/
 @media screen and (min-width: 1024px) {
+  body {
+    width: 1024px;
+  }
+
   .logo_ohmyfood {
     display: flex;
     padding: 10px;
@@ -773,6 +888,10 @@ user agent stylesheet li {
   .research_title {
     width: 30%;
     padding: 10px;
+  }
+
+  .animation_menu {
+    width: 53%;
   }
 }
 
