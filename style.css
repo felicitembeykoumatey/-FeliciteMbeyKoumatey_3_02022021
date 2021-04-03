@@ -212,13 +212,6 @@ figure a {
   text-decoration: none;
 }
 
-hr {
-  width: 2.5rem;
-  border-top: 3px solid var(--green);
-  margin: -14px 0 0 0;
-
-}
-
 section .animation:before {
   display: none;
 }
@@ -344,7 +337,6 @@ header a {
   font-weight: 300;
   margin: 10px 12px 15px 10px;
 }
-
 
 .main_restaurant {
   flex-direction: column;
@@ -571,103 +563,72 @@ li {
 }
 
 /*4 menus*/
-
-span .check {
+.header_first {
+  position: relative;
   display: flex;
   justify-content: center;
-  width: 0;
-  right: 0;
   align-items: center;
-  background-color: #99E2D0;
-  border-radius: 0 12px 12px 0;
-  color: white;
-  overflow: hidden;
-  transition: width 400ms ease-in-out;
 }
-.heat-empty {
-  position: relative;
-  z-index: 1;
-}
-.image_menu {
-  position: relative;
-  object-fit: cover;
+
+.header_first img {
   width: 100%;
-  height: 300px;
+  height: 200px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
-.animation_meal {
-  position: relative;
-  z-index: 99;
-  margin-top: -40px;
-  height: 1400px;
-  background-color: var(--gray);
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-}
-
-.menu_title {
-  margin: 10px 15px 10px 15px;
-  font-weight: bold;
-  font-size: medium;
-}
-
-.header_first {
-  display: flex;
+.animation:hover {
+  -webkit-transform: rotate(-360deg);
+  transform: rotate(-360deg);
 }
 
 .fa-arrow-left {
   color: var(--black);
 }
 
-.menu_main {
-  flex-direction: column;
+.animation:hover .fa-check-circle {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  opacity: 1;
+}
+
+.menu_global {
+  position: relative;
 }
 
 .animation_menu {
   position: absolute;
-  margin: -82px 15px 15px 20px;
-  width: 80%;
+  font-family: "Shrikhand", sans-serif;
   background-color: var(--gray_dark);
-  border-top-left-radius: 45px;
-  border-top-right-radius: 45px;
+  border-radius: 30px 30px 0 0;
+  width: 86%;
+  margin: -115px 15px 20px 0;
 }
 
-.menu {
-  position: relative;
-  margin:5px;
-  background-color: var(--white);
-  cursor: pointer;
-  overflow: hidden;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-radius: 1.5rem;
-  -webkit-box-shadow: 3px 3px 10px #dedada;
-  box-shadow: 3px 3px 10px #dedada;
-
-  -webkit-animation: slideUp 500ms 0.6s ease-in-out both;
-  animation: slideUp 500ms 0.6s ease-in-out both;
-  -webkit-animation: slideUp 500ms 0.2s ease-in-out both;
-  animation: slideUp 500ms 0.2s ease-in-out both;
+.header_first img {
+  height: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  object-fit: cover;
 }
 
+.fa-arrow-left {
+  color: var(--black);
+}
 
-.fa-check-circle {
-  color: var(--white);
-  background-color: var(--green);
-  border-radius: 0 12px 12px 0;
-  justify-content: center;
-  align-items: center;
-  transition: width 400ms ease-in-out;
+hr {
+  width: 100px;
+  border-top: 3px solid var(--green);
+  margin: -14px 0 0 0;
 }
 
 .order-dishes {
   display: flex;
   text-decoration: none;
   justify-content: center;
-  margin: 24px 15px 15px 6px;
-  padding: 12px 4px 14px 13px;
   width: 85%;
+  margin: 24px 15px 15px 20px;
+  padding: 12px 4px 14px 13px;
   border: 0;
   font-weight: bold;
   font-size: medium;
@@ -675,45 +636,98 @@ span .check {
   color: var(--white);
   background-image: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9));
   cursor: pointer;
-  transform: scale(1);
-  transition-property: transform;
-  transition-duration: 1s;
+  transition-duration: 0.50s;
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+}
+
+.order-dishes a {
+  display: flex;
+  text-decoration: none;
+  color: var(--white);
 }
 
 .order-dishes:hover {
-  transform: scale(1.15);
-  box-shadow: 12px 12px 2px 1px rgb(1 2 43 / 19%);
+  opacity: 0.8s;
 }
 
-.price {
-  display: flex;
-  justify-content: flex-end;
-  margin: -35px 15px 15px 0;
-  padding-right: 10px;
-  font-size: 14px;
-  font-weight: bold;
+/*animations 4 menus*/
+
+/*animations Entrées*/
+.menu_starter1 {
+  -webkit-animation: slideUp 1000ms 0.2s ease-in-out both;
+  animation: slideUp 1000ms 0.2s ease-in-out both;
 }
 
-.title {
-  margin: 6px 0 5px 12px;
-  font-weight: bold;
-  font-size: medium;
+.menu_starter2 {
+  -webkit-animation: slideUp 1000ms 0.4s ease-in-out both;
+  animation: slideUp 1000ms 0.4s ease-in-out both;
 }
 
-.footer_menu {
-  position: relative;
-  margin: 1253px 10px 12px -3px;
-  width: 658px;
+.menu_starter3 {
+  -webkit-animation: slideUp 1000ms 0.6s ease-in-out both;
+  animation: slideUp 1000ms 0.6s ease-in-out both;
 }
+
+.menu_starter4 {
+  -webkit-animation: slideUp 1000ms 0.6s ease-in-out both;
+  animation: slideUp 1000ms 0.6s ease-in-out both;
+}
+
+/*animations Plats*/
+.anim_dishe1 {
+  -webkit-animation: slideUp 1000ms 0.8s ease-in-out both;
+  animation: slideUp 1000ms 0.8s ease-in-out both;
+}
+
+.anim_dishe2 {
+  -webkit-animation: slideUp 1000ms 1s ease-in-out both;
+  animation: slideUp 1000ms 1s ease-in-out both;
+}
+
+.anim_dishe3 {
+  -webkit-animation: slideUp 1000ms 1.2s ease-in-out both;
+  animation: slideUp 1000ms 1.2s ease-in-out both;
+}
+
+.anim_dishe4 {
+  -webkit-animation: slideUp 1000ms 1.4s ease-in-out both;
+  animation: slideUp 1000ms 1.4s ease-in-out both;
+}
+
+/*animations Desserts*/
+
+.anim_desserts1 {
+  -webkit-animation: slideUp 1000ms 1.6s ease-in-out both;
+  animation: slideUp 1000ms 1.6s ease-in-out both;
+}
+
+.anim_desserts2 {
+  -webkit-animation: slideUp 1000ms 1.8s ease-in-out both;
+  animation: slideUp 1000ms 1.8s ease-in-out both;
+}
+
+.anim_desserts3 {
+  -webkit-animation: slideUp 1000ms 2s ease-in-out both;
+  animation: slideUp 1000ms 2s ease-in-out both;
+}
+
+.anim_desserts4 {
+  -webkit-animation: slideUp 1000ms 2.2s ease-in-out both;
+  animation: slideUp 1000ms 2.2s ease-in-out both;
+}
+
+
 
 /*mobile*/
 @media screen and (min-width:375px) {
   .logo_ohmyfood {
     margin: 10px 10px 10px 152px;
   }
+
   .footer_title {
     margin: 10px 10px 10px 50px;
   }
+
 }
 
 /*tablets*/
@@ -747,17 +761,6 @@ span .check {
     margin: 1327px 10px 12px -13px;
     width: 704px;
   }
-
-  .animation_menu {
-    width: 430px;
-  }
-
-  .order-dishes {
-    margin: 24px 15px 15px 109px;
-    padding: 12px 4px 14px 13px;
-    width: 43%;
-  }
-
 }
 
 /*desktop*/
@@ -767,9 +770,6 @@ span .check {
     padding: 10px;
   }
 
-  .animation_menu {
-    width: 95%;
-  }
 }
 
 
