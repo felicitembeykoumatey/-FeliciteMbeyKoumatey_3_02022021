@@ -11,7 +11,6 @@
   --heart: #C968DB;
 }
 
-@charset "UTF-8";
 
 @-webkit-keyframes lds-ripple {
   from {
@@ -89,7 +88,15 @@
   }
 }
 
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
 
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 @-webkit-keyframes slideUp {
   0% {
@@ -194,11 +201,7 @@ li:before {
 }
 
 /*restaurants*/
-.far,
-.fas {
-  font-family: "Font Awesome 5 Free";
-  margin: 20px 10px 15px 0;
-}
+
 
 .partner,
 .suggest_a_restaurant,
@@ -563,6 +566,27 @@ li {
 }
 
 /*4 menus*/
+.menu_title {
+  padding: 0 10px 15px 23px;
+  font-weight: bold;
+  font-size: x-large;
+  font-family: "Shrikhand", cursive;
+}
+
+main img {
+  width: 80%;
+}
+
+.global {
+  width: 100%;
+  margin: 0;
+  padding-bottom: 30px;
+  -webkit-animation: slideUp 1000ms ease-in-out both;
+  animation: slideUp 1000ms ease-in-out both;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--gray_dark);
+}
+
 .header_first {
   position: relative;
   display: flex;
@@ -598,11 +622,21 @@ li {
 
 .animation_menu {
   position: absolute;
-  font-family: "Shrikhand", sans-serif;
+  font-family: "Shrikhand", cursive;
   background-color: var(--gray_dark);
   border-radius: 30px 30px 0 0;
-  width: 86%;
-  margin: -115px 15px 20px 0;
+  width: 100%;
+  margin: -75px 15px 20px 0;
+}
+
+.menu {
+  display: flex;
+  position: relative;
+  background-color: var(--white);
+  box-shadow: 0 0px 15px rgb(0 0 0 / 10%);
+  border-radius: 15px;
+  margin: 0 15px 15px 0;
+  cursor: pointer;
 }
 
 .header_first img {
@@ -617,9 +651,10 @@ li {
 }
 
 hr {
-  width: 100px;
-  border-top: 3px solid var(--green);
-  margin: -14px 0 0 0;
+  width: 13%;
+  margin: 5px 0 15px 0;
+  border-style: solid;
+  color: var(--green)
 }
 
 .order-dishes {
@@ -645,78 +680,158 @@ hr {
   text-decoration: none;
   color: var(--white);
 }
-
 .order-dishes:hover {
   opacity: 0.8s;
+  transform: scale(1.15);
+  box-shadow: 12px 12px 2px 1px rgb(1 2 43 / 19%);
 }
 
 /*animations 4 menus*/
 
 /*animations Entrées*/
+
 .menu_starter1 {
-  -webkit-animation: slideUp 1000ms 0.2s ease-in-out both;
-  animation: slideUp 1000ms 0.2s ease-in-out both;
+  display: flex;
+  -webkit-animation: slideUp 500ms 0.2s ease-in-out both;
+  animation: slideUp 500ms 0.2s ease-in-out both;
 }
 
 .menu_starter2 {
-  -webkit-animation: slideUp 1000ms 0.4s ease-in-out both;
-  animation: slideUp 1000ms 0.4s ease-in-out both;
+  display: flex;
+  -webkit-animation: slideUp 500ms 0.4s ease-in-out both;
+  animation: slideUp 500ms 0.4s ease-in-out both;
 }
 
 .menu_starter3 {
-  -webkit-animation: slideUp 1000ms 0.6s ease-in-out both;
-  animation: slideUp 1000ms 0.6s ease-in-out both;
+  display: flex;
+  -webkit-animation: slideUp 500ms 0.6s ease-in-out both;
+  animation: slideUp 500ms 0.6s ease-in-out both;
 }
 
 .menu_starter4 {
-  -webkit-animation: slideUp 1000ms 0.6s ease-in-out both;
-  animation: slideUp 1000ms 0.6s ease-in-out both;
+  display: flex;
+  -webkit-animation: slideUp 500ms 0.8s ease-in-out both;
+  animation: slideUp 500ms 0.8s ease-in-out both;
 }
 
 /*animations Plats*/
+
 .anim_dishe1 {
-  -webkit-animation: slideUp 1000ms 0.8s ease-in-out both;
-  animation: slideUp 1000ms 0.8s ease-in-out both;
+  display: flex;
+  -webkit-animation: slideUp 500ms 1s ease-in-out both;
+  animation: slideUp 500ms 1s ease-in-out both;
 }
 
 .anim_dishe2 {
-  -webkit-animation: slideUp 1000ms 1s ease-in-out both;
-  animation: slideUp 1000ms 1s ease-in-out both;
+  display: flex;
+  -webkit-animation: slideUp 500ms 1.2s ease-in-out both;
+  animation: slideUp 500ms 1.2s ease-in-out both;
 }
 
 .anim_dishe3 {
-  -webkit-animation: slideUp 1000ms 1.2s ease-in-out both;
-  animation: slideUp 1000ms 1.2s ease-in-out both;
+  display: flex;
+  -webkit-animation: slideUp 500ms 1.4s ease-in-out both;
+  animation: slideUp 500ms 1.4s ease-in-out both;
 }
 
 .anim_dishe4 {
-  -webkit-animation: slideUp 1000ms 1.4s ease-in-out both;
-  animation: slideUp 1000ms 1.4s ease-in-out both;
+  display: flex;
+  -webkit-animation: slideUp 500ms 1.6s ease-in-out both;
+  animation: slideUp 500ms 1.6s ease-in-out both;
 }
 
 /*animations Desserts*/
 
 .anim_desserts1 {
-  -webkit-animation: slideUp 1000ms 1.6s ease-in-out both;
-  animation: slideUp 1000ms 1.6s ease-in-out both;
+  display: flex;
+  -webkit-animation: slideUp 500ms 1.8s ease-in-out both;
+  animation: slideUp 500ms 1.8s ease-in-out both;
 }
 
 .anim_desserts2 {
-  -webkit-animation: slideUp 1000ms 1.8s ease-in-out both;
-  animation: slideUp 1000ms 1.8s ease-in-out both;
+  display: flex;
+  -webkit-animation: slideUp 500ms 2s ease-in-out both;
+  animation: slideUp 500ms 2s ease-in-out both;
 }
 
 .anim_desserts3 {
-  -webkit-animation: slideUp 1000ms 2s ease-in-out both;
-  animation: slideUp 1000ms 2s ease-in-out both;
+  display: flex;
+  -webkit-animation: slideUp 500ms 2.2s ease-in-out both;
+  animation: slideUp 500ms 2.2s ease-in-out both;
 }
 
 .anim_desserts4 {
-  -webkit-animation: slideUp 1000ms 2.2s ease-in-out both;
-  animation: slideUp 1000ms 2.2s ease-in-out both;
+  display: flex;
+  -webkit-animation: slideUp 1000ms 2.4s ease-in-out both;
+  animation: slideUp 500ms 2.4s ease-in-out both;
 }
 
+/*section menu*/
+.menu {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "text1 ."
+    "text2 price";
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0;
+  padding: 0 10px;
+}
 
+.menu h3:nth-child(1) {
+  grid-area: text1;
+  margin: 15px 0 5px 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.menu p:nth-child(2) {
+  grid-area: text2;
+  margin: 0 0 15px 0;
+}
+
+.menu b:nth-child(3) {
+  grid-area: price;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 15px 15px 0;
+  font-weight: bold;
+}
+
+.menu p {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/*animation check*/
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  background-color: var(--green);
+  border-radius: 0 12px 12px 0;
+  color: var(--white);
+  right: 0;
+  overflow: hidden;
+  transition: width 400ms ease-in-out;
+}
+
+.animation {
+  margin: 0 15px 15px 0;
+}
+
+.animation:hover .check {
+  width: 75px;
+}
+
+.animation:hover .check>.fa-check-circle {
+  opacity: 1;
+  animation: rotation 500ms ease-in-out;
+}
 
 /*mobile*/
 @media screen and (min-width:375px) {
@@ -727,7 +842,6 @@ hr {
   .footer_title {
     margin: 10px 10px 10px 50px;
   }
-
 }
 
 /*tablets*/
@@ -758,8 +872,7 @@ hr {
   }
 
   .footer_menu {
-    margin: 1327px 10px 12px -13px;
-    width: 704px;
+    margin: 0 10px 12px -13px;
   }
 }
 
@@ -774,6 +887,7 @@ hr {
 
 
 @media screen and (min-width:1200px) {
+
 
   .cards {
     flex-wrap: nowrap;
