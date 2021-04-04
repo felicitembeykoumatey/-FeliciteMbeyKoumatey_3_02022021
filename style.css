@@ -155,7 +155,7 @@ nav {
 figure article {
   display: flex;
   justify-content: space-between;
-  margin: -31px 12px 15px 0px;
+  margin: -28px 12px 15px 0;
   padding: 15px;
   height: 58px;
   width: 236px;
@@ -170,7 +170,7 @@ figure p {
 /*research*/
 
 .research {
-  padding: 10px 0px 30px 0;
+  padding: 10px 0 30px 0;
   text-align: center;
   background: var(--gray_dark);
 }
@@ -239,7 +239,7 @@ footer li:before {
 
 
 h2 {
-  margin-bottom: 20px;
+  margin: 20px 15px 15px 44px;
   font-size: medium;
   font-weight: lighter;
   text-transform: uppercase;
@@ -469,7 +469,7 @@ li {
   border-top-right-radius: 15px;
 }
 
-.heat-empty {
+.heart-empty {
   position: relative;
   z-index: 1;
 }
@@ -483,11 +483,12 @@ li {
 }
 
 .heart-empty:hover~.heart-full {
-  display: block;
+  display: flex;
   color: var(--heart);
   cursor: pointer;
   transform: scale(1);
   opacity: 1;
+  justify-content: ;
 }
 
 .fa-list-ul,
@@ -567,18 +568,14 @@ li {
 
 /*4 menus*/
 .menu_title {
+  display: flex;
   padding: 0 10px 15px 23px;
   font-weight: bold;
   font-size: x-large;
   font-family: "Shrikhand", cursive;
 }
 
-main img {
-  width: 80%;
-}
-
 .global {
-  width: 100%;
   margin: 0;
   padding-bottom: 30px;
   -webkit-animation: slideUp 1000ms ease-in-out both;
@@ -652,7 +649,7 @@ main img {
 
 hr {
   width: 13%;
-  margin: 5px 0 15px 0;
+  margin: 5px 0 15px 40px;
   border-style: solid;
   color: var(--green)
 }
@@ -680,6 +677,7 @@ hr {
   text-decoration: none;
   color: var(--white);
 }
+
 .order-dishes:hover {
   opacity: 0.8s;
   transform: scale(1.15);
@@ -871,9 +869,6 @@ hr {
     justify-content: center;
   }
 
-  .footer_menu {
-    margin: 0 10px 12px -13px;
-  }
 }
 
 /*desktop*/
@@ -888,6 +883,9 @@ hr {
 
 @media screen and (min-width:1200px) {
 
+  .menu {
+    width: 70%;
+  }
 
   .cards {
     flex-wrap: nowrap;
