@@ -140,7 +140,7 @@ main {
 }
 
 /* header */
-header {
+body>header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -626,6 +626,11 @@ li {
   margin: -75px 15px 20px 0;
 }
 
+h1 .fa-heart {
+  position: absolute;
+  right: 50px;
+}
+
 .menu {
   display: flex;
   position: relative;
@@ -878,11 +883,18 @@ hr {
     padding: 10px;
   }
 
+.fa-heart {
+  right: 50px;
+}
+
 }
 
 
 @media screen and (min-width:1200px) {
 
+.fa-heart {
+  right: 130px;
+}
 
 
   .cards {
