@@ -883,9 +883,7 @@ hr {
 
 @media screen and (min-width:1200px) {
 
-  .menu {
-    width: 70%;
-  }
+
 
   .cards {
     flex-wrap: nowrap;
