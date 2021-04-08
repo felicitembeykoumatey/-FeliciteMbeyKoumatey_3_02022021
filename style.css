@@ -198,8 +198,18 @@ li:before {
 }
 
 /*header nav*/
+
 .nav {
+  display: flex;
   flex-direction: row;
+  align-items: center;
+  background-color: var(--white);
+}
+
+.nav i {
+  position: relative;
+  right: 55px;
+  color: var(--black);
 }
 
 /*restaurants*/
@@ -372,7 +382,22 @@ header a {
   text-decoration: none;
 }
 
-.explorer:hover {
+.order-dishes {
+  display: flex;
+  padding: 13px;
+  align-self: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: 0;
+  border-radius: 100px;
+  color: var(--white);
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, 0.9));
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.explorer:hover,
+.order-dishes:hover {
   transform: scale(1.15);
   box-shadow: 12px 12px 2px 1px rgb(1 2 43 / 19%);
 }
@@ -578,7 +603,8 @@ li {
 }
 
 .global {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
   padding-bottom: 30px;
   -webkit-animation: slideUp 1000ms ease-in-out both;
   animation: slideUp 1000ms ease-in-out both;
@@ -616,7 +642,6 @@ li {
 }
 
 
-
 .animation_menu {
   position: absolute;
   left: 0;
@@ -629,8 +654,8 @@ li {
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
   margin: 8px;
-  padding: 13px 15px 15px 3px;
-  width: 91%;
+  padding: 13px 15px 15px 6px;
+  width: 90%;
 }
 
 h1 .fa-heart {
@@ -666,34 +691,11 @@ hr {
   color: var(--green)
 }
 
-.order-dishes {
-  display: flex;
-  text-decoration: none;
-  justify-content: center;
-  width: 85%;
-  margin: 24px 15px 15px 20px;
-  padding: 12px 4px 14px 13px;
-  border: 0;
-  font-weight: bold;
-  font-size: medium;
-  border-radius: 100px;
-  color: var(--white);
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9));
-  cursor: pointer;
-  transition-duration: 0.50s;
-  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
-}
 
 .order-dishes a {
   display: flex;
   text-decoration: none;
   color: var(--white);
-}
-
-.order-dishes:hover {
-  opacity: 0.8s;
-  transform: scale(1.15);
-  box-shadow: 12px 12px 2px 1px rgb(1 2 43 / 19%);
 }
 
 /* 4 menus*/
@@ -892,6 +894,10 @@ hr {
     margin: 8px;
     padding: 22px 12px 15px 10px;
     width: 95%;
+  }
+
+  .fa-arrow-left {
+    left: -150px;
   }
 }
 
