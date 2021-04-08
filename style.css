@@ -907,13 +907,18 @@ hr {
   .research_title {
     padding: 10px;
   }
+  .fa-arrow-left {
+    left: -348px;
+  }
+  .animation_menu{
+    padding: 29px 12px 15px 45px;
+    width: 95%;
+  }
 
 }
 
 
 @media screen and (min-width:1200px) {
-
-
   .cards {
     flex-wrap: nowrap;
   }
@@ -929,4 +934,10 @@ hr {
   .function_card {
     padding: 0;
   }
+  .fa-arrow-left {
+    left: -565px;
+}
+.animation_menu{
+  padding: 29px 12px 15px 44px;
+}
 }
