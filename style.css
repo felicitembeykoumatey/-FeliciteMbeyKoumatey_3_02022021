@@ -135,7 +135,6 @@ body {
 
 main {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   padding-bottom: 50px;
   background-color: var(--gray);
@@ -199,6 +198,7 @@ figure div {
 }
 
 figure {
+  width: 80%;
   background-color: var(--white);
   border-radius: 20px;
   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2);
@@ -259,7 +259,6 @@ footer li:before {
 h2 {
   margin: 20px 15px 15px 44px;
   font-size: medium;
-  font-weight: lighter;
   text-transform: uppercase;
 }
 
@@ -283,8 +282,7 @@ h2 {
 
 .partner,
 .suggest_a_restaurant,
-.legal_notice,
-  {
+.legal_notice {
   margin: 20px 10px 15px 0;
 }
 
@@ -299,7 +297,8 @@ section .animation:before {
   position: fixed;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(var(--green_dark), var(--pink));
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
   -webkit-animation: load-wrapper 3s both;
   animation: load-wrapper 3s both;
   min-width: 375px;
@@ -437,8 +436,7 @@ section .animation:before {
 
 .function_title,
 .restaurants_title {
-  padding: 25px 10px;
-  font-size: medium;
+  padding: 0;
   font-weight: bold;
 }
 
@@ -475,14 +473,6 @@ li {
 
 /*restaurants*/
 
-.cards_restaurants {
-
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-
-}
-
 .all_cards {
   padding: 0;
   margin: 0;
@@ -491,7 +481,7 @@ li {
 .notify-badge {
   display: flex;
   position: absolute;
-  margin-left: 200px;
+  margin-left: 215px;
   margin-bottom: 200px;
   margin-top: 30px;
   height: 29px;
@@ -525,8 +515,9 @@ li {
 
 .fa-heart {
   position: absolute;
-  right: 50px;
-  font-size: 26px;
+  margin: 10px;
+  right: 15px;
+  font-size: 28px;
   -webkit-text-stroke: 1px var(--white);
 }
 
@@ -693,8 +684,8 @@ li {
   justify-content: space-between;
   align-items: center;
   background-color: var(--gray_dark);
-  border-top-left-radius: 35px;
-  border-top-right-radius: 35px;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
 }
 
 .menu {
@@ -901,6 +892,11 @@ hr {
     margin: 10px 10px 10px 152px;
   }
 
+  .cards_restaurants {
+    display: flex;
+    flex-direction: column;
+  }
+
   .footer_title {
     margin: 10px 10px 10px 50px;
   }
@@ -919,21 +915,15 @@ hr {
     align-content: center;
   }
 
-  .animation_menu {
-    margin: 8px;
-    padding: 22px 12px 15px 10px;
-    width: 95%;
-  }
-
   .fa-arrow-left {
     left: -150px;
   }
 
   .cards_restaurants {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    margin: 0 200px;
   }
+
+
 }
 
 /*desktop*/
@@ -951,10 +941,16 @@ hr {
     padding: 29px 12px 15px 45px;
   }
 
+
+  figure {
+    width: 34%;
+  }
+
   .cards_restaurants {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: flex;
+    margin: 0;
     padding: 0 50px;
   }
 
@@ -982,6 +978,19 @@ hr {
 
   .animation_menu {
     padding: 29px 12px 15px 44px;
+  }
+
+  .notify-badge {
+    margin-left: 170px;
+  }
+
+  .cards_restaurants {
+    flex-wrap: nowrap;
+    padding: 0;
+  }
+
+  figure {
+    width: 22%;
   }
 
 
