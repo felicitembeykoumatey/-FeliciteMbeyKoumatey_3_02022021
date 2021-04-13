@@ -992,6 +992,13 @@ hr {
   figure {
     width: 22%;
   }
-
-
 }
+@media screen and (min-width: 1440px) {
+  figure {
+    width: 8%;
+  }
+  .cards_restaurants {
+  
+    padding: 0;
+  }
+  }
