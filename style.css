@@ -156,6 +156,17 @@ header h1 {
   font-family: "Shrikhand";
 }
 
+header img {
+  height: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+header a {
+  text-decoration: none;
+}
+
 /* main */
 
 figure img {
@@ -166,10 +177,18 @@ figure img {
   border-top-right-radius: 15px;
 }
 
+figure h3 {
+  margin: 10px;
+  font-size: 1.2rem;
+}
 
 figure a {
   color: var(--black);
   text-decoration: none;
+}
+
+figure p {
+  margin: 10px;
 }
 
 figure div {
@@ -178,7 +197,6 @@ figure div {
   justify-content: space-between;
 
 }
-
 
 figure {
   background-color: var(--white);
@@ -191,12 +209,9 @@ figure:hover {
   transform: scale(1.05);
 }
 
-/*research*/
-
-.research {
-  padding: 10px 0 30px 0;
-  text-align: center;
-  background: var(--gray_dark);
+figcaption {
+  display: flex;
+  position: relative;
 }
 
 /*function*/
@@ -221,7 +236,31 @@ li:before {
   font-size: medium;
   color: var(--white);
   content: counter(functions);
+}
 
+/*footer*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+footer li:before {
+  display: none;
+}
+
+h2 {
+  margin: 20px 15px 15px 44px;
+  font-size: medium;
+  font-weight: lighter;
+  text-transform: uppercase;
 }
 
 /*header nav*/
@@ -252,32 +291,6 @@ li:before {
 
 section .animation:before {
   display: none;
-}
-
-/*footer*/
-
-footer {
-  display: flex;
-  flex-direction: column;
-  color: var(--white);
-  background-color: var(--black);
-}
-
-footer a {
-  text-decoration: none;
-  color: var(--white);
-}
-
-footer li:before {
-  display: none;
-}
-
-
-h2 {
-  margin: 20px 15px 15px 44px;
-  font-size: medium;
-  font-weight: lighter;
-  text-transform: uppercase;
 }
 
 
@@ -339,12 +352,15 @@ h2 {
   text-align: center;
 }
 
-header img {
-  height: 30px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  object-fit: cover;
+
+
+/*research*/
+.research {
+  padding: 10px 0 30px 0;
+  text-align: center;
+  background: var(--gray_dark);
 }
+
 
 .header_global {
   position: relative;
@@ -354,12 +370,6 @@ header img {
   background-color: var(--white);
 }
 
-header a {
-  text-decoration: none;
-}
-
-
-/*research*/
 .research_paragraph {
   font-size: 1.2rem;
 }
@@ -474,8 +484,8 @@ li {
 }
 
 .all_cards {
-     padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .notify-badge {
@@ -515,7 +525,6 @@ li {
 
 .fa-heart {
   position: absolute;
-  margin-top:-15px;
   right: 50px;
   font-size: 26px;
   -webkit-text-stroke: 1px var(--white);
@@ -623,6 +632,8 @@ li {
   border-top-right-radius: 40px;
 }
 
+
+
 /*4 menus*/
 .menu_title {
   display: flex;
@@ -728,10 +739,11 @@ hr {
   width: 100%;
   height: 300px;
 }
-.menu_main{
+
+.menu_main {
   flex-direction: column;
-    background-color: #F2F2F2;
-    padding-bottom: 40px;
+  background-color: #F2F2F2;
+  padding-bottom: 40px;
 }
 
 /*animations Entrées*/
@@ -896,9 +908,6 @@ hr {
 
 /*tablets*/
 @media screen and (min-width: 768px) {
-
-
-
   .choice {
     width: 40%;
   }
@@ -910,8 +919,6 @@ hr {
     align-content: center;
   }
 
-
-
   .animation_menu {
     margin: 8px;
     padding: 22px 12px 15px 10px;
@@ -920,6 +927,12 @@ hr {
 
   .fa-arrow-left {
     left: -150px;
+  }
+
+  .cards_restaurants {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 
@@ -937,8 +950,10 @@ hr {
   .animation_menu {
     padding: 29px 12px 15px 45px;
   }
-  .cards_restaurants{
+
+  .cards_restaurants {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 0 50px;
   }
@@ -969,5 +984,5 @@ hr {
     padding: 29px 12px 15px 44px;
   }
 
-  
+
 }
