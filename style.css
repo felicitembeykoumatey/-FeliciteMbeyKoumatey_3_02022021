@@ -255,11 +255,7 @@ footer li:before {
   display: none;
 }
 
-h2 {
-  margin: 20px 15px 15px 44px;
-  font-size: medium;
-  text-transform: uppercase;
-}
+
 
 /*header nav*/
 
@@ -435,8 +431,11 @@ section .animation:before {
 
 .function_title,
 .restaurants_title {
-  padding: 0;
+  margin: 20px 15px 15px 44px;
+  padding: 20px 0;
   font-weight: bold;
+  font-size: medium;
+  text-transform: uppercase;
 }
 
 .function_card {
@@ -985,17 +984,20 @@ hr {
 
   .cards_restaurants {
     flex-wrap: nowrap;
+    margin: 0;
     padding: 0;
     align-items: center;
+
   }
 
 
 }
+
 @media screen and (min-width:2560px) {
-   .cards_restaurants {
+  .cards_restaurants {
     flex-wrap: nowrap;
     padding: 0;
-    margin:0;
-  
-}
+    margin: 0;
+
+  }
 }
