@@ -991,7 +991,7 @@ hr {
   }
 
   figure {
-    width: 22%;
+    width: 18%;
   }
 }
 @media screen and (min-width:2560px) {
@@ -999,5 +999,6 @@ hr {
     flex-wrap: nowrap;
     padding: 0;
     margin:0;
-  }
+  
+}
 }
