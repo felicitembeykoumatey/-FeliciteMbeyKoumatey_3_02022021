@@ -134,7 +134,6 @@ body {
 }
 
 main {
-  display: flex;
   flex-wrap: wrap;
   padding-bottom: 50px;
   background-color: var(--gray);
@@ -990,9 +989,7 @@ hr {
     align-items: center;
   }
 
-  figure {
-    width: 18%;
-  }
+
 }
 @media screen and (min-width:2560px) {
    .cards_restaurants {
