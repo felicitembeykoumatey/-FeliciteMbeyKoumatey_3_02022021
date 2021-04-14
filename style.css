@@ -947,10 +947,10 @@ hr {
   }
 
   .cards_restaurants {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    display: flex;
-    margin: 0;
+    margin: 20px 0px 0 70px;
     padding: 0 50px;
   }
 
@@ -987,9 +987,17 @@ hr {
   .cards_restaurants {
     flex-wrap: nowrap;
     padding: 0;
+    align-items: center;
   }
 
   figure {
     width: 22%;
+  }
+}
+@media screen and (min-width:2560px) {
+   .cards_restaurants {
+    flex-wrap: nowrap;
+    padding: 0;
+    margin:0;
   }
 }
