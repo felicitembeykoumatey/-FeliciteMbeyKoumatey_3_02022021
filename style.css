@@ -986,6 +986,7 @@ hr {
     align-items: center;
 
   }
+
 }
 
 @media screen and (min-width:2560px) {
@@ -994,9 +995,5 @@ hr {
     padding: 0;
     margin: 0;
 
-  }
-
-  .notify-badge {
-    margin-left: 200px;
   }
 }
