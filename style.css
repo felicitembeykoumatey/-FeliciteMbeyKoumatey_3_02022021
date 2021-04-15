@@ -131,6 +131,7 @@ body {
   margin: 0;
   min-width: 375px;
   color: var(--black);
+  font-family: "Roboto", sans-serif;
 }
 
 main {
@@ -139,9 +140,6 @@ main {
   background-color: var(--gray);
 }
 
-section {
-  font-family: "Roboto", sans-serif;
-}
 
 /* header */
 body>header {
@@ -150,9 +148,6 @@ body>header {
   align-items: center;
 }
 
-header h1 {
-  font-family: "Shrikhand";
-}
 
 header img {
   height: 30px;
@@ -166,6 +161,11 @@ header a {
 }
 
 /* main */
+h2 {
+  margin: 20px 15px 15px 45px;
+  padding: 20px 0;
+  font-size: medium;
+}
 
 figure img {
   height: 175px;
@@ -418,9 +418,6 @@ section .animation:before {
   box-shadow: 12px 12px 2px 1px rgb(1 2 43 / 19%);
 }
 
-.title {
-  font-family: "Shrikhand";
-}
 
 /*Fonctionnement*/
 .function {
@@ -989,7 +986,6 @@ hr {
     align-items: center;
 
   }
-
 
 }
 
