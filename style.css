@@ -134,7 +134,6 @@ body {
 }
 
 main {
-  display: flex;
   flex-wrap: wrap;
   padding-bottom: 50px;
   background-color: var(--gray);
@@ -167,6 +166,11 @@ header a {
 }
 
 /* main */
+h2 {
+  margin: 20px 15px 15px 44px;
+  padding: 20px 0;
+  font-size: medium;
+}
 
 figure img {
   height: 175px;
@@ -256,11 +260,7 @@ footer li:before {
   display: none;
 }
 
-h2 {
-  margin: 20px 15px 15px 44px;
-  font-size: medium;
-  text-transform: uppercase;
-}
+
 
 /*header nav*/
 
@@ -435,9 +435,12 @@ section .animation:before {
 }
 
 .function_title,
-.restaurants_title {
-  padding: 0;
+.restaurants_title{
+  margin: 20px 15px 15px 44px;
+  padding: 20px 0;
   font-weight: bold;
+  font-size: medium;
+  text-transform: uppercase;
 }
 
 .function_card {
@@ -947,10 +950,10 @@ hr {
   }
 
   .cards_restaurants {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    display: flex;
-    margin: 0;
+    margin: 20px 0px 0 70px;
     padding: 0 50px;
   }
 
@@ -986,10 +989,18 @@ hr {
 
   .cards_restaurants {
     flex-wrap: nowrap;
+    margin: 0;
     padding: 0;
-  }
+    align-items: center;
 
-  figure {
-    width: 22%;
+  }
+}
+
+@media screen and (min-width:2560px) {
+  .cards_restaurants {
+    flex-wrap: nowrap;
+    padding: 0;
+    margin: 0;
+
   }
 }
