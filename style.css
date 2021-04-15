@@ -131,6 +131,7 @@ body {
   margin: 0;
   min-width: 375px;
   color: var(--black);
+  font-family: "Roboto", sans-serif;
 }
 
 main {
@@ -139,9 +140,6 @@ main {
   background-color: var(--gray);
 }
 
-section {
-  font-family: "Roboto", sans-serif;
-}
 
 /* header */
 body>header {
@@ -150,9 +148,6 @@ body>header {
   align-items: center;
 }
 
-header h1 {
-  font-family: "Shrikhand";
-}
 
 header img {
   height: 30px;
@@ -423,9 +418,6 @@ section .animation:before {
   box-shadow: 12px 12px 2px 1px rgb(1 2 43 / 19%);
 }
 
-.title {
-  font-family: "Shrikhand";
-}
 
 /*Fonctionnement*/
 .function {
@@ -435,7 +427,7 @@ section .animation:before {
 }
 
 .function_title,
-.restaurants_title{
+.restaurants_title {
   margin: 20px 15px 15px 44px;
   padding: 20px 0;
   font-weight: bold;
@@ -1002,5 +994,9 @@ hr {
     padding: 0;
     margin: 0;
 
+  }
+
+  .notify-badge {
+    margin-left: 200px;
   }
 }
