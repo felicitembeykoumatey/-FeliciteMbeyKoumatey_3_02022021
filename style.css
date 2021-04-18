@@ -289,13 +289,12 @@ section .animation:before {
 	background: linear-gradient(#FF79DA, #9356DC);
 	-webkit-animation: load-wrapper 3s both;
 	animation: load-wrapper 3s both;
-	min-width: 375px;
 }
 
 .lds-ripple {
 	position: absolute;
 	width: 80px;
-	height: 80px;
+	height: 56px;
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
@@ -415,14 +414,12 @@ section .animation:before {
 /*Fonctionnement*/
 
 .function {
-	flex-direction: row;
-	align-items: center;
 	background-color: var(--white);
 }
 
 .function_title,
 .restaurants_title {
-	margin: 20px 15px 15px 44px;
+	margin: 0 0 0 40px;
 	padding: 20px 0;
 	font-weight: bold;
 	font-size: medium;
@@ -430,8 +427,8 @@ section .animation:before {
 }
 
 .function_card {
-	margin-left: 25px;
-	margin-right: 20px;
+	margin-right: 40px;
+	align-items: center;
 }
 
 .choice {
@@ -813,7 +810,7 @@ hr {
 .menu {
 	display: grid;
 	grid-template-columns: auto;
-	grid-template-areas: "text1 ." "text2 price";
+	grid-template-areas: "text1 .""text2 price";
 	flex-wrap: nowrap;
 	width: 100%;
 	margin: 0;
@@ -902,18 +899,17 @@ hr {
 	.choice {
 		width: 40%;
 	}
-	.function_card {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: row;
-		align-content: center;
-	}
 	.fa-arrow-left {
 		left: -150px;
 	}
 	.cards_restaurants {
 		margin: 0 200px;
 	}
+    .function_card {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
 }
 
 
@@ -966,6 +962,7 @@ hr {
 		padding: 0;
 		align-items: center;
 	}
+
 }
 
 @media screen and (min-width:2560px) {
@@ -1000,13 +997,5 @@ hr {
 		margin: 0;
 		padding: 0;
 		align-items: center;
-	}
-}
-
-@media screen and (min-width:2560px) {
-	.cards_restaurants {
-		flex-wrap: nowrap;
-		padding: 0;
-		margin: 0;
 	}
 }
