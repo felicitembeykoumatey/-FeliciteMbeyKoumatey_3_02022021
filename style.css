@@ -942,6 +942,7 @@ hr {
 }
 
 @media screen and (min-width:1440px) {
+<<<<<<< HEAD
 	.choice {
 		width: 25%;
 	}
@@ -977,4 +978,49 @@ hr {
 	.notify-badge {
 		margin-left: 200px;
 	}
+=======
+
+
+  .choice {
+    width: 25%;
+  }
+
+  .research_paragraph {
+    width: 100%;
+  }
+
+  .function_card {
+    padding: 0;
+  }
+
+  .fa-arrow-left {
+    left: -565px;
+  }
+
+  .animation_menu {
+    padding: 29px 12px 15px 44px;
+  }
+
+  .notify-badge {
+    margin-left: 170px;
+  }
+
+  .cards_restaurants {
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+
+  }
+
+}
+
+@media screen and (min-width:2560px) {
+  .cards_restaurants {
+    flex-wrap: nowrap;
+    padding: 0;
+    margin: 0;
+
+  }
+>>>>>>> dev
 }
